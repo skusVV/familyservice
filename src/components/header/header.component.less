@@ -1,0 +1,361 @@
+@import '../../constants';
+
+.header{
+  display: flex;
+  justify-content: space-evenly;
+  height: 85px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background: @color_white;
+
+  &_burger {
+    display: none;
+    width: 40px;
+    height: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 5%;
+    border: 2px solid @color_grey;
+    margin-left: -25px;
+  }
+
+  &_navigation {
+    width: 35%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    &_item {
+      color: @color_grey;
+      cursor: pointer;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: 22;
+        top: 20px;
+        left: 50%;
+        right: 50%;
+        background: @color_red; /*** COLOR OF THE LINE ***/
+        height: 3px; /*** THICKNESS OF THE LINE ***/
+        transition-property: right, left;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+      }
+
+      &:hover {
+        color: @color_red;
+
+        &:before {
+          right: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  &_logo {
+    width: 15%;
+
+    img {
+      height: 90%;
+
+    }
+  }
+
+  &_contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 35%;
+    color: @color_grey;
+
+    &_phone {
+      display: flex;
+      justify-content: space-between;
+      width: 60%;
+
+      div {
+        position: relative;
+        cursor: pointer;
+
+        &:before {
+          content: "";
+          position: absolute;
+          z-index: 22;
+          top: 20px;
+          left: 50%;
+          right: 50%;
+          background: @color_red; /*** COLOR OF THE LINE ***/
+          height: 3px; /*** THICKNESS OF THE LINE ***/
+          transition-property: right, left;
+          transition-duration: 0.3s;
+          transition-timing-function: ease-out;
+        }
+
+        &:hover {
+          color: @color_red;
+
+          &:before {
+            right: 0;
+            left: 0;
+          }
+
+        }
+      }
+    }
+
+    &_button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 25%;
+      height: 50%;
+      color: @color_grey;
+      border-radius: 5%;
+      border: 2px solid @color_grey;
+      cursor: pointer;
+
+      &:hover {
+        color: @color_red;
+        border-radius: 5%;
+        border: 2px solid @color_red;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1300px) {
+  .header{
+
+    &_navigation {
+      width: 40%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    &_logo {
+      width: 15%;
+    }
+
+    &_contact {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 40%;
+      color: @color_grey;
+
+      &_phone {
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+      }
+
+      &_button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1150px) {
+  .header{
+
+    &_navigation {
+      width: 42.5%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    &_logo {
+      width: 15%;
+    }
+
+    &_contact {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 42.5%;
+      color: @color_grey;
+
+      &_phone {
+        display: flex;
+        justify-content: space-around;
+        width: 70%;
+      }
+
+      &_button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 960px) {
+  .header {
+
+    &_burger {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-left: -25px;
+    }
+
+    &_navigation {
+      display: none;
+    }
+
+    &_logo {
+      width: 15%;
+    }
+
+    &_contact {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 50%;
+      color: @color_grey;
+
+      &_phone {
+        display: flex;
+        justify-content: space-around;
+        width: 70%;
+      }
+
+      &_button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .header {
+
+    &_burger {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-left: -25px;
+    }
+
+    &_navigation {
+      display: none;
+    }
+
+    &_contact {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 25%;
+      color: @color_grey;
+
+      &_phone {
+        display: none;
+      }
+
+      &_button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .header {
+    height: 55px;
+    justify-content: space-between;
+
+    &_burger {
+      display: block;
+      width: 25px;
+      height: 25px;
+      //margin-top: 15px;
+      margin-left: 25px;
+    }
+
+    &_navigation {
+      display: none;
+    }
+
+
+    &_contact {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 25%;
+      color: @color_grey;
+
+      &_phone {
+        display: none;
+      }
+
+      &_button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header {
+    height: 55px;
+    padding: 0 5px;
+
+    &_burger {
+      display: block;
+      width: 25px;
+      height: 25px;
+      //margin-top: 15px;
+      margin-left: 0px;
+    }
+
+    &_navigation {
+      display: none;
+    }
+
+
+    &_contact {
+      &_phone {
+        display: none;
+      }
+
+      &_button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  }
+}

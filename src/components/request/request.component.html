@@ -1,0 +1,31 @@
+<section class="request" id="request">
+  <div class="request_form">
+    <div class="request_form_header">
+      <h1>Оставить Заявку</h1>
+    </div>
+    <div class="request_form_body">
+      <div class="request_form_body_form">
+        <mat-form-field class="request_form_field">
+          <input matInput placeholder="Номер телефона">
+        </mat-form-field>
+        <mat-form-field class="request_form_field">
+          <input matInput placeholder="Name">
+        </mat-form-field>
+        <mat-form-field class="request_form_field">
+          <mat-select [(value)]="selected">
+            <mat-option>None</mat-option>
+            <mat-option value="option1">Option 1</mat-option>
+            <mat-option value="option2">Option 2</mat-option>
+            <mat-option value="option3">Option 3</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="request_form_field">
+          <textarea matInput placeholder="Leave a comment"></textarea>
+        </mat-form-field>
+      </div>
+      <div class="request_form_body_description">
+        <div>Для того чтобы мы связались с вами оставте плиз заявку!!!</div>
+      </div>
+    </div>
+  </div>
+</section>

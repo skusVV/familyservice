@@ -1,0 +1,53 @@
+@import '../../constants';
+
+.request{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  &_form {
+    width: 70%;
+    border: 2px solid #F7F7F7;
+
+    &_header {
+      background: #F7F7F7;
+
+      h1 {
+        text-align: center;
+        color: @color_grey;
+        vertical-align: center;
+        padding: 20px;
+      }
+    }
+
+    &_body {
+
+      &_form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid #F7F7F7;
+        padding: 50px 0px;
+      }
+
+      &_description {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 75px;
+
+        div {
+          font-style: italic;
+          font-weight: 500;
+          font-size: 18px;
+          color: @color_red;
+        }
+      }
+    }
+
+    &_field {
+      width: 40%;
+    }
+  }
+}

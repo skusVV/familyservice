@@ -1,0 +1,11 @@
+<div class="landing">
+  <div class="banner">
+    <img class="banner_image" src="assets/img/4.jpg" alt="">
+    <div class="banner_cover"></div>
+    <h1 class="banner_title">Комфорт и уют в Вашем доме, веселый ребенок, сверкающая чистотой квартира, мир и спокойствие в Вашей семье!
+    </h1>
+  </div>
+  <app-section *ngFor="let item of sections" [section]="item"></app-section>
+
+  <app-request></app-request>
+</div>

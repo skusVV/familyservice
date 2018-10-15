@@ -1,0 +1,16 @@
+<section class="section" [id]="section.scrollToId ? section.scrollToId : ''" [ngStyle]="{'background-color': section.bgColor ? section.bgColor : '#fff'}">
+  <h1 class="section_title">{{section.title}}</h1>
+  <div class="section_item" [ngClass]="item.reverse ? 'section_item-reverse' : ''" *ngFor="let item of section.items">
+    <div class="section_item_image">
+      <img [src]="item.imgSrc" alt="">
+    </div>
+    <div class="section_item_text">
+      <h1 class="section_item_text_title" *ngIf="item.title">{{item.title}}</h1>
+      <p class="section_item_text_description" *ngIf="item.description">{{item.description}}</p>
+      <ul class="section_item_text_tags" *ngFor="let tag of item.tags">
+        <li>{{tag}}</li>
+      </ul>
+    </div>
+  </div>
+</section>
+

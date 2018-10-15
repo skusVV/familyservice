@@ -1,0 +1,73 @@
+@import '../../constants';
+
+.section {
+  width: 100%;
+  padding: 50px 12.5%;
+
+
+  &_title {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid @color_red;
+    color: @color_grey;
+
+    &:hover {
+      color: @color_red;
+    }
+  }
+
+  &_item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px;
+
+    &-reverse {
+      flex-direction: row-reverse;
+    }
+
+
+    &_image {
+      width: 40%;
+      img {
+        max-width: 100%;
+      }
+    }
+
+    &_text {
+      width: 40%;
+
+      &_title {
+        color: @color_grey;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      &_description {
+        color: @color_grey;
+        font-weight: 600;
+        margin-bottom: 10px;
+        text-align: center;
+        font-style: italic;
+      }
+
+      &_tags {
+        color: @color_grey;
+        list-style-type: none;
+        margin-top: 10px;
+
+        li {
+          &:before {
+            content:' \2713';
+            color: @color_red;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}

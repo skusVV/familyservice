@@ -1,0 +1,41 @@
+@import '../../constants';
+
+.landing {
+  .banner {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 85px;
+    margin-bottom: 85px;
+
+    &_image {
+      width: 100%;
+    }
+
+    &_cover {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: #000;
+      opacity: 0.2;
+      transition: opacity 1s;
+
+      &:hover {
+        opacity: 0;
+      }
+    }
+
+    &_title {
+      display: block;
+      width: 75%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: @color_white;
+      opacity: 0.8;
+    }
+  }
+}
