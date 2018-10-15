@@ -4,26 +4,31 @@
       <h1>Оставить Заявку</h1>
     </div>
     <div class="request_form_body">
-      <div class="request_form_body_form">
+      <div class="request_form_body_form" [formGroup]="form" *ngIf="!showAfterSendMessage">
         <mat-form-field class="request_form_field">
-          <input matInput placeholder="Номер телефона">
+          <input matInput placeholder="Номер телефона" [textMask]="{mask: mask, keepCharPositions: true}" formControlName="phone">
         </mat-form-field>
-        <mat-form-field class="request_form_field">
-          <input matInput placeholder="Name">
+        <mat-form-field class="request_form_field" *ngIf="showSecondPart">
+          <input matInput placeholder="Имя" formControlName="name">
         </mat-form-field>
-        <mat-form-field class="request_form_field">
-          <mat-select [(value)]="selected">
-            <mat-option>None</mat-option>
-            <mat-option value="option1">Option 1</mat-option>
-            <mat-option value="option2">Option 2</mat-option>
-            <mat-option value="option3">Option 3</mat-option>
+        <mat-form-field class="request_form_field" *ngIf="showSecondPart">
+          <mat-select placeholder="Выберите персонал" formControlName="person">
+            <mat-option *ngFor="let option of selectOptions" [value]="option">{{option}}</mat-option>
           </mat-select>
         </mat-form-field>
-        <mat-form-field class="request_form_field">
-          <textarea matInput placeholder="Leave a comment"></textarea>
+        <mat-form-field class="request_form_field" *ngIf="showSecondPart">
+          <textarea matInput placeholder="Коментарий" rows="3" formControlName="comment"></textarea>
         </mat-form-field>
+        <button mat-raised-button color="accent" *ngIf="showSecondPart" type="submit" (click)="submitForm()">Отправить Заявку</button>
       </div>
-      <div class="request_form_body_description">
+
+      <div class="request_form_body_thanks" *ngIf="showAfterSendMessage">
+        <div class="request_form_body_thanks_text" >
+          Благодарим за заявку. Наш представитель свяжеться с вами в самие короткие сроки.
+          <div>Хотите отредактировать заявку? <span (click)="showAfterSendMessage = !showAfterSendMessage">Жми тут</span></div>
+        </div>
+      </div>
+      <div class="request_form_body_description" *ngIf="!showAfterSendMessage">
         <div>Для того чтобы мы связались с вами оставте плиз заявку!!!</div>
       </div>
     </div>

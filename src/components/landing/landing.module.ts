@@ -5,6 +5,9 @@ import { SectionComponent } from '../section/section.component';
 import { RequestComponent } from '../request/request.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { TextMaskModule } from 'angular2-text-mask';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { MatSelectModule } from '@angular/material/select';
   imports: [
     CommonModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    TextMaskModule,
+    MatButtonModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [LandingComponent]
