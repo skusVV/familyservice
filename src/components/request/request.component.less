@@ -1,6 +1,6 @@
 @import '../../constants';
 
-.request{
+.request {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -103,3 +103,47 @@
   color: @color_red;
  }
 
+
+@media screen and (max-width: 1000px) {
+  .request {
+    &_form {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .request {
+    &_form {
+      width: 100%;
+
+      &_field {
+        width: 60%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 775px) {
+  .request {
+    &_form {
+      width: 100%;
+
+      &_field {
+        width: 70%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .request {
+    &_form {
+      width: 100%;
+
+      &_field {
+        width: 90%;
+      }
+    }
+  }
+}

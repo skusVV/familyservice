@@ -1,7 +1,23 @@
 <header class="header">
-  <div class="header_burger">
-
-  </div>
+  <nav class="header_burger">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <span scrollTo="forCustomers">Клиентам</span>
+      </button>
+      <button mat-menu-item>
+        <span scrollTo="personal">Персонал</span>
+      </button>
+      <button mat-menu-item>
+        <span scrollTo="aboutUs">О нас</span>
+      </button>
+      <button mat-menu-item>
+        <span scrollTo="footer">Контакты</span>
+      </button>
+    </mat-menu>
+  </nav>
   <nav class="header_navigation">
       <div class="header_navigation_item" scrollTo="forCustomers">Клиентам</div>
       <div class="header_navigation_item" scrollTo="personal">Персонал</div>

@@ -48,4 +48,16 @@ export class RequestComponent implements OnInit {
     console.log(this.form.getRawValue());
     this.showAfterSendMessage = true;
   }
+
+  phoneFocus() {
+    this.form.get('phone').setValue(' ');
+  }
+
+  phoneBlur() {
+    const phoneControl = this.form.get('phone');
+
+    if (phoneControl.value === ' ') {
+      phoneControl.setValue('');
+    }
+  }
 }

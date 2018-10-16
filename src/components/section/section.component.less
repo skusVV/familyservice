@@ -29,6 +29,7 @@
 
     &_image {
       width: 40%;
+
       img {
         max-width: 100%;
       }
@@ -70,4 +71,53 @@
 
 .reverse {
   flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 1100px) {
+  .section {
+    padding: 50px 5%;
+
+    &_item {
+      &_image {
+        width: 45%;
+      }
+
+      &_text{
+        width: 45%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .section {
+    padding: 50px 25px;
+
+    &_item {
+      &_image {
+        width: 48%;
+      }
+
+      &_text{
+        width: 48%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .section {
+    padding: 50px 25px;
+
+    &_item {
+      &_image {
+        display: none;
+      }
+
+      &_text{
+        width: 100%;
+        padding: 0 5%;
+      }
+    }
+  }
 }

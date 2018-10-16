@@ -1,8 +1,8 @@
 @import '../../constants';
 
-.header{
+.header {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   height: 85px;
   position: fixed;
   width: 100%;
@@ -11,28 +11,33 @@
 
   &_burger {
     display: none;
-    width: 40px;
-    height: 50%;
-    justify-content: space-evenly;
-    align-items: center;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 5%;
-    border: 2px solid @color_grey;
-    margin-left: -25px;
+    height: 24px;
+    margin-top: 30.5px;
+    margin-left: 25px;
+  }
+
+  &_logo {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    height: 100%;
+
+    img {
+      height: 90%;
+    }
   }
 
   &_navigation {
-    width: 35%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    padding-left: 25px;
 
     &_item {
       color: @color_grey;
       cursor: pointer;
       position: relative;
+      margin-right: 10px;
 
       &:before {
         content: "";
@@ -59,30 +64,22 @@
     }
   }
 
-  &_logo {
-    width: 15%;
-
-    img {
-      height: 90%;
-
-    }
-  }
-
   &_contact {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 35%;
     color: @color_grey;
+    padding-right: 25px;
 
     &_phone {
       display: flex;
       justify-content: space-between;
-      width: 60%;
+      padding: 0 25px;
 
       div {
         position: relative;
         cursor: pointer;
+        margin-right: 25px;
 
         &:before {
           content: "";
@@ -114,12 +111,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 25%;
       height: 50%;
       color: @color_grey;
       border-radius: 5%;
       border: 2px solid @color_grey;
       cursor: pointer;
+      padding: 0 25px;
 
       &:hover {
         color: @color_red;
@@ -130,231 +127,38 @@
   }
 }
 
-
-@media screen and (max-width: 1300px) {
-  .header{
-
-    &_navigation {
-      width: 40%;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-    }
-
-    &_logo {
-      width: 15%;
-    }
-
-    &_contact {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      width: 40%;
-      color: @color_grey;
-
-      &_phone {
-        display: flex;
-        justify-content: space-between;
-        width: 60%;
-      }
-
-      &_button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 25%;
-      }
-    }
-  }
-}
-
-
-@media screen and (max-width: 1150px) {
-  .header{
-
-    &_navigation {
-      width: 42.5%;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-    }
-
-    &_logo {
-      width: 15%;
-    }
-
-    &_contact {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      width: 42.5%;
-      color: @color_grey;
-
-      &_phone {
-        display: flex;
-        justify-content: space-around;
-        width: 70%;
-      }
-
-      &_button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 25%;
-      }
-    }
-  }
-}
-
-
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1175px) {
   .header {
-
-    &_burger {
-      width: 40px;
-      height: 40px;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      margin-left: -25px;
-    }
-
-    &_navigation {
-      display: none;
-    }
-
-    &_logo {
-      width: 15%;
-    }
-
     &_contact {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      width: 50%;
-      color: @color_grey;
-
-      &_phone {
-        display: flex;
-        justify-content: space-around;
-        width: 70%;
-      }
-
-      &_button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 25%;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 830px) {
-  .header {
-
-    &_burger {
-      width: 40px;
-      height: 40px;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      margin-left: -25px;
-    }
-
-    &_navigation {
-      display: none;
-    }
-
-    &_contact {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      width: 25%;
-      color: @color_grey;
-
       &_phone {
         display: none;
       }
-
-      &_button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-      }
     }
   }
 }
 
-
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 850px) {
   .header {
-    height: 55px;
-    justify-content: space-between;
+    &_navigation {
+      display: none;
+    }
 
     &_burger {
       display: block;
-      width: 25px;
-      height: 25px;
-      //margin-top: 15px;
-      margin-left: 25px;
-    }
-
-    &_navigation {
-      display: none;
-    }
-
-
-    &_contact {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      width: 25%;
-      color: @color_grey;
-
-      &_phone {
-        display: none;
-      }
-
-      &_button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-      }
     }
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 520px) {
   .header {
-    height: 55px;
-    padding: 0 5px;
-
-    &_burger {
-      display: block;
-      width: 25px;
-      height: 25px;
-      //margin-top: 15px;
-      margin-left: 0px;
+    &_logo {
+      transform: translate(-70%);
     }
-
-    &_navigation {
-      display: none;
-    }
-
 
     &_contact {
-      &_phone {
-        display: none;
-      }
-
       &_button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
+        padding: 0 15px;
+        height: 40%;
       }
     }
   }
