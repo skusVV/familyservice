@@ -1,10 +1,48 @@
 <agm-map *ngIf="isBrowser" [latitude]="lat"
-[longitude]="lng"
-[styles]="styles"
-[zoom]="17"
-[scrollwheel]="false"
-[streetViewControl]="false"
-[disableDefaultUI]="false"
-[zoomControl]="false" >
+  [longitude]="lng"
+  [styles]="styles"
+  [zoom]="17"
+  [scrollwheel]="false"
+  [streetViewControl]="false"
+  [disableDefaultUI]="false"
+  [zoomControl]="false" >
 <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
 </agm-map>
+
+<footer class="footer" id="footer">
+  <div class="footer_info">
+      <div class="footer_info_header">
+        <div class="footer_info_header_address">
+          <div class="footer_info_header_address_item">
+            Адресс:
+            <span>ул. Жилянская 122/4</span>
+          </div>
+          <div class="footer_info_header_address_item">
+            Телефон:
+            <span><a href="tel:+380939267692">+38 (093) 026 76 92</a></span>
+          </div>
+          <div class="footer_info_header_address_item">
+            Телефон:
+            <span><a href="tel:+380939267692">+38 (093) 026 76 92</a></span>
+          </div>
+          <div class="footer_info_header_address_item">
+            Почта:
+            <span>familyservice@gmail.com</span>
+          </div>
+        </div>
+        <div class="footer_info_header_share">
+          <div>
+            <a href="https://www.facebook.com/">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/?hl=ru">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    <div class="footer_info_footer">
+      <div>© 2018 - Family Service. Все права защищены.</div>
+    </div>
+  </div>
+</footer>

@@ -3,6 +3,8 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { filter, takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs/Subject';
 
+const EMPTY_STRING = ' ';
+
 @Component({
   selector: 'app-request',
   templateUrl: './request.component.html',
@@ -34,7 +36,7 @@ export class RequestComponent implements OnInit {
     this.form.get('phone')
       .valueChanges
       .pipe(
-        filter(item => item[item.length - 1] !== '_'),
+        filter(item => item !== EMPTY_STRING && item[item.length - 1] !== '_'),
         takeUntil(this.destroyPhoneStream)
       )
       .subscribe(() => {
@@ -50,13 +52,13 @@ export class RequestComponent implements OnInit {
   }
 
   phoneFocus() {
-    this.form.get('phone').setValue(' ');
+    this.form.get('phone').setValue(EMPTY_STRING);
   }
 
   phoneBlur() {
     const phoneControl = this.form.get('phone');
 
-    if (phoneControl.value === ' ') {
+    if (phoneControl.value === EMPTY_STRING) {
       phoneControl.setValue('');
     }
   }
