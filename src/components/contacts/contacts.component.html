@@ -1,0 +1,27 @@
+<section class="section" [id]="section.scrollToId ? section.scrollToId : ''" [ngStyle]="{'background-color': section.bgColor ? section.bgColor : '#fff'}">
+  <h1 class="section_title">{{section.title}}</h1>
+  <div class="section_item">
+    <div class="section_item_text">
+      <h1 class="section_item_text_title" *ngIf="section.firstItem.title">{{section.firstItem.title}}</h1>
+      <p class="section_item_text_description" *ngIf="section.firstItem.description">{{section.firstItem.description}}</p>
+      <!--<ul class="section_item_text_tags" *ngFor="let tag of section.firstItem.tags">-->
+      <div class="phone" *ngFor="let phone of section.firstItem.phones">
+        &#8203;
+        <span>
+          <a [href]="phone.phone">{{phone.name}}</a>
+        </span>
+      </div>
+    </div>
+    <div class="section_item_text">
+      <h1 class="section_item_text_title" *ngIf="section.secondItem.title">{{section.secondItem.title}}</h1>
+      <p class="section_item_text_description" *ngIf="section.secondItem.description">{{section.secondItem.description}}</p>
+      <div class="phone" *ngFor="let phone of section.secondItem.phones">
+        &#8203;
+        <span>
+          <a [href]="phone.phone">{{phone.name}}</a>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+

@@ -18,7 +18,7 @@ export class RequestComponent implements OnInit {
   selectOptions = [
     'Няня',
     'Гувернантка',
-    'Домоработница',
+    'Домработница',
     'Сиделка',
     'Повар',
     'Водитель',

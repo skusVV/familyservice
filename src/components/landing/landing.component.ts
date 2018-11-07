@@ -37,7 +37,7 @@ export class LandingComponent {
 Подготовка к школе обязательно входит в перечень задач работника.`
         },
         {
-          title: 'Домоработница',
+          title: 'Домработница',
           imgSrc: 'assets/img/domorabot.jpg',
           description: `Горничная или домработница поддержит чистоту и порядок, приготовит пищу,
 организует покупку продуктов и оплату счетов, осуществит сезонные работы в доме.
@@ -117,7 +117,7 @@ export class LandingComponent {
         },
         {
           title: 'Охрана',
-          imgSrc: 'assets/img/ohrana.jpg',
+          imgSrc: 'assets/img/security_2.jpg',
           description: `Загородный дом должен иметь защиту, которую смогут предоставить наши охранники. В случае
 проникновения нежелательных гостей на участок или в дом,наши кандидаты смогут остановить
 процесс кражи, а в идеале — задержать воров на месте преступления. Наши кандидаты
@@ -130,7 +130,7 @@ export class LandingComponent {
 
   clients = {
       title: '',
-      bgColor: '#F7F7F7',
+      bgColor: '#D3D3D1',
       scrollToId: 'forCustomers',
       firstItem: {
         title: 'Клиентам',
@@ -161,7 +161,7 @@ export class LandingComponent {
 
   workWithAgency = {
     title: 'О Нас',
-    scrollToId: 'aboutUs',
+    bgColor: '#D3D3D1',
     generalDescription: `
       Мы – профессионалы своего дела! Опыт наших специалистов в сфере подбора домашнего персонала, составляет уже более
 5-ти лет! В нашем коллективе работают дипломированные сотрудники, которые выполняют свою

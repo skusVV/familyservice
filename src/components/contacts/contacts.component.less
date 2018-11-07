@@ -3,6 +3,7 @@
 .section {
   width: 100%;
   padding: 50px 12.5%;
+  margin-top: -50px;
 
 
   &_title {
@@ -20,7 +21,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-top: 50px;
+    //margin-top: 50px;
 
     &-reverse {
       flex-direction: row-reverse;
@@ -42,6 +43,7 @@
         color: @color_grey;
         text-align: center;
         margin-bottom: 20px;
+        margin-top: 25px;
       }
 
       &_description {
@@ -50,7 +52,7 @@
         margin-bottom: 10px;
         //font-style: italic;
         text-align: center;
-        margin-top: 50px;
+        margin-top: 25px;
       }
 
       &_tags {
@@ -122,6 +124,22 @@
         width: 100%;
         padding: 0 5%;
       }
+    }
+  }
+}
+
+
+.phone {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+
+  a {
+    text-decoration: none;
+    color: @color_grey;
+
+    &:hover {
+      color: @color_red;
     }
   }
 }
