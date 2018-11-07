@@ -8,12 +8,15 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { TextMaskModule } from 'angular2-text-mask';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { DoubleSectionComponent } from '../doubleSection/doubleSection.component';
 
 @NgModule({
   declarations: [
     LandingComponent,
     SectionComponent,
-    RequestComponent
+    RequestComponent,
+    DoubleSectionComponent
   ],
   imports: [
     CommonModule,
@@ -21,9 +24,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatSelectModule,
     TextMaskModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [LandingComponent]
 })
 export class LandingModule { }

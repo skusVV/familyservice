@@ -2,6 +2,7 @@ import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { filter, takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs/Subject';
+import { HttpClient } from '@angular/common/http';
 
 const EMPTY_STRING = ' ';
 
@@ -16,10 +17,16 @@ export class RequestComponent implements OnInit {
   mask = ['(', '0', /[1-9]/, /\d/, ')', ' ', '-', ' ', /\d/, /\d/, /\d/, ' ', '-', ' ', /\d/, /\d/, ' ', '-', ' ', /\d/, /\d/];
   selectOptions = [
     'Няня',
-    'Охраник',
+    'Гувернантка',
+    'Домоработница',
+    'Сиделка',
+    'Повар',
     'Водитель',
-    'Уборщик',
-    'Другое',
+    'Садовник-Хозяйственник',
+    'Гардеробщица',
+    'Семейная пара',
+    'Охрана',
+    'Другое'
   ];
   showSecondPart = false;
   showAfterSendMessage = false;
@@ -31,6 +38,10 @@ export class RequestComponent implements OnInit {
     comment: new FormControl(''),
   });
   destroyPhoneStream = new Subject<void>();
+
+  constructor(private http: HttpClient) {
+
+  }
 
   ngOnInit() {
     this.form.get('phone')
@@ -47,8 +58,10 @@ export class RequestComponent implements OnInit {
   }
 
   submitForm() {
-    console.log(this.form.getRawValue());
-    this.showAfterSendMessage = true;
+    const data = this.form.getRawValue();
+    this.http.post('api/request', data).subscribe(() => {
+      this.showAfterSendMessage = true;
+    });
   }
 
   phoneFocus() {

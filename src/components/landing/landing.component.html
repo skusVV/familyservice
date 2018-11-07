@@ -5,7 +5,9 @@
     <h1 class="banner_title">Комфорт и уют в Вашем доме, веселый ребенок, сверкающая чистотой квартира, мир и спокойствие в Вашей семье!
     </h1>
   </div>
+  <app-doubleSection [section]="clients"></app-doubleSection>
   <app-section *ngFor="let item of sections" [section]="item"></app-section>
+  <app-doubleSection [section]="workWithAgency"></app-doubleSection>
 
   <app-request></app-request>
 </div>
