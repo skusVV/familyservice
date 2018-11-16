@@ -10,6 +10,7 @@
     padding-bottom: 10px;
     border-bottom: 1px solid @color_red;
     color: @color_grey;
+    cursor: pointer;
 
     &:hover {
       color: @color_red;
@@ -32,6 +33,15 @@
 
       img {
         max-width: 100%;
+        transition: all .3s;
+        cursor: pointer;
+        border-radius: 10%;
+
+        &:hover{
+          transform: scale(1.1);
+          transition: all .3s;
+          filter: saturate(1.25);
+        }
       }
     }
 
@@ -42,6 +52,13 @@
         color: @color_grey;
         text-align: center;
         margin-bottom: 20px;
+        cursor: pointer;
+        transition: all .3s;
+
+        &:hover{
+          color: @color_red;
+          transform: scale(1.1);
+        }
       }
 
       &_description {
@@ -50,6 +67,12 @@
         margin-bottom: 10px;
         //font-style: italic;
         text-align: justify;
+        transition: all .3s;
+
+        &:hover{
+          transform: scale(1.05);
+        }
+
       }
 
       &_tags {

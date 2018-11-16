@@ -20,7 +20,6 @@ export class SmoothScrollToDirective {
   @Input() containerId: string;
 
   @HostListener('click') onClick() {
-
     this.targetElement = document.getElementById(this.scrollTo);
     if (!this.targetElement) return;
     let _callbackBefore = this.callbackBefore;

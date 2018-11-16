@@ -16,7 +16,7 @@ import { DoubleSectionComponent } from '../doubleSection/doubleSection.component
     LandingComponent,
     SectionComponent,
     RequestComponent,
-    DoubleSectionComponent
+    DoubleSectionComponent,
   ],
   imports: [
     CommonModule,

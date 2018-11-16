@@ -23,7 +23,7 @@
       transition: opacity 1s;
 
       &:hover {
-        opacity: 0;
+        //opacity: .1;
       }
     }
 
@@ -36,6 +36,30 @@
       transform: translate(-50%, -50%);
       color: @color_white;
       opacity: 0.8;
+    }
+
+    &_button {
+      position: absolute;
+      top: 120px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      z-index: 10;
+      background: transparent;
+      border-radius: 5%;
+      border: 2px solid @color_white;
+      color: @color_white;
+      cursor: pointer;
+      padding: 0 25px;
+      transition: all .3s;
+
+      &:hover {
+        background: @color_white;
+        color: @color_grey;
+      }
     }
   }
 }

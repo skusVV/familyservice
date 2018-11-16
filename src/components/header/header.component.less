@@ -128,13 +128,16 @@
       align-items: center;
       justify-content: center;
       height: 50%;
-      color: @color_grey;
+      background: @color_red;
       border-radius: 5%;
-      border: 2px solid @color_grey;
+      border: 2px solid @color_white;
+      color: @color_white;
       cursor: pointer;
       padding: 0 25px;
+      transition: all .3s;
 
       &:hover {
+        background: @color_white;
         color: @color_red;
         border-radius: 5%;
         border: 2px solid @color_red;
@@ -143,7 +146,7 @@
   }
 }
 
-@media screen and (max-width: 1175px) {
+@media screen and (max-width: 1280px) {
   .header {
     &_contact {
       &_phone {
@@ -165,7 +168,7 @@
   }
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 560px) {
   .header {
     &_logo {
       transform: translate(-110%);

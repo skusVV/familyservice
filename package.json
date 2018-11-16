@@ -11,6 +11,8 @@
     "build:server:prod": "ng run familyservice:server && webpack --config webpack.server.config.js --progress --colors",
     "build:browser:prod": "ng build --prod",
     "build:prod": "npm run build:server:prod && npm run build:browser:prod",
+    "artifact": "rimraf ./tmp/build.tar.gz && mkdir -p tmp && cd ./dist && tar -zcvf ./../tmp/build.tar.gz * && cd ../",
+    "gzip": "cd ./dist/browser && gzip main.*.js && gzip styles.*.css && gzip polyfills.*.js ",
     "server": "node local.js"
   },
   "private": true,
