@@ -6,7 +6,8 @@
     </div>
     <div class="section_item_text">
       <h1 class="section_item_text_title" *ngIf="item.title">{{item.title}}</h1>
-      <p class="section_item_text_description" *ngIf="item.description">{{item.description}}</p>
+      <p class="section_item_text_description desktop" *ngIf="item.description">{{item.description}}</p>
+      <p class="section_item_text_description mobile" *ngIf="item.mobileDescription">{{item.mobileDescription}}</p>
       <ul class="section_item_text_tags" *ngFor="let tag of item.tags">
         <li>{{tag}}</li>
       </ul>
