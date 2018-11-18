@@ -5,7 +5,7 @@
     width: 100%;
     height: auto;
     position: relative;
-    top: 85px;
+    top: 90px;
     margin-bottom: 85px;
 
     &_image {
@@ -13,14 +13,14 @@
     }
 
     &_cover {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: #000;
-      opacity: 0.2;
-      transition: opacity 1s;
+      //position: absolute;
+      //top: 0;
+      //right: 0;
+      //bottom: 0;
+      //left: 0;
+      //background: #000;
+      //opacity: 0.2;
+      //transition: opacity 1s;
 
       &:hover {
         //opacity: .1;
@@ -82,5 +82,44 @@
     display: inline-block;
     max-width: 100%;
     margin-top: 85px;
+    position: relative;
+    top: 5px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .landing {
+    .banner {
+      &_button {
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .landing {
+    .banner {
+      &_button {
+        position: absolute;
+        top: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .landing {
+    .banner {
+      &_button {
+        display: none;
+      }
+    }
   }
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SmoothScroll } from '../../directives/scroll.directive';
 
 @Component({
   selector: 'app-landing',
@@ -179,7 +180,7 @@ export class LandingComponent {
   workWithAgency = {
     title: 'О Нас',
     bgColor: '#D3D3D1',
-    scrollToId: '',
+    scrollToId: 'aboutUs',
     generalDescription: `
       Мы – профессионалы своего дела! Опыт наших специалистов в сфере подбора домашнего персонала, составляет уже более
 5-ти лет! В нашем коллективе работают дипломированные сотрудники, которые выполняют свою
@@ -210,4 +211,15 @@ export class LandingComponent {
       ]
     }
   };
+
+  doScroll() {
+    new SmoothScroll(document.getElementById('request'), {
+      duration: 800,
+      offset: null,
+      easing: null,
+      callbackBefore: () => {},
+      callbackAfter: () => {},
+      containerId: null
+    });
+  }
 }

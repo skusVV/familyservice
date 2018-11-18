@@ -54,7 +54,7 @@ export class SmoothScrollToDirective {
 
 }
 
-class SmoothScroll {
+export class SmoothScroll {
   constructor(element: any, options: any) {
     this.smoothScroll(element, options);
   }
