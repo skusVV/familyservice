@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   workWithAgency = {
     title: 'Контакты',
-    scrollToId: 'aboutUs',
+    scrollToId: 'contacts',
     firstItem: {
       title: 'Телефон для соискателей',
       description: 'Консультации по трудоустройству:',
