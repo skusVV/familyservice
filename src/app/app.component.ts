@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  workWithAgency = {
+  contacts = {
     title: 'Контакты',
     scrollToId: 'contacts',
     firstItem: {
@@ -30,7 +30,6 @@ export class AppComponent {
     secondItem: {
       title: 'Телефоны для работодателей',
       description: 'Заказ услуг:',
-      imgSrc: 'assets/img/5.jpg',
       phones: [
         {
           name: '(095) 88 66 877',
