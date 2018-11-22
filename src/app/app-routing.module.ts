@@ -1,20 +1,37 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { LandingComponent } from '../components/landing/landing.component';
+import { Routes, RouterModule,
+  // PreloadAllModules
+} from '@angular/router';
 
 const routes: Routes = [
   {
     path: '',
-    component: LandingComponent
+    loadChildren: '../modules/landing/landing.module#LandingModule',
   },
   {
-    path: '**',
-    redirectTo: ''
-  }
-];
+    path: 'personal/',
+    redirectTo: 'pesronal',
+  },
+  {
+    path: 'personal',
+    loadChildren: '../modules/personal/personal.module#PersonalModule',
+  },
+  {
+    path: 'add/',
+    redirectTo: 'add',
+  },
+  {
+    path: 'add',
+    loadChildren: '../modules/add/add.module#AddModule',
+  },
+]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    // useHash: true,
+    // preloadingStrategy: PreloadAllModules
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
