@@ -1,0 +1,53 @@
+@import '../../constants';
+
+.add {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+}
+
+.form{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+
+  &_field {
+
+  }
+}
+
+
+// button style
+.mat-fab.mat-accent, .mat-flat-button.mat-accent, .mat-mini-fab.mat-accent, .mat-raised-button.mat-accent {
+  background-color: @color_red;
+}
+
+// underline
+.mat-focused .mat-form-field-underline .mat-form-field-ripple{
+  background: @color_red;
+}
+
+// placeholder
+.mat-form-field.mat-focused .mat-form-field-label {
+  color: @color_red;
+}
+
+
+// caret
+.mat-input-element {
+  caret-color: @color_grey;
+}
+
+// arrow on select
+.mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+  color: @color_red;
+}
+
+// selected user in select
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+  color: @color_red;
+}
