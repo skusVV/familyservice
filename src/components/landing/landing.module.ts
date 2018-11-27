@@ -10,6 +10,8 @@ import { TextMaskModule } from 'angular2-text-mask';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DoubleSectionComponent } from '../doubleSection/doubleSection.component';
+import {PricesComponent} from '../prices/prices.component';
+import {PriceComponent} from '../price/price.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { DoubleSectionComponent } from '../doubleSection/doubleSection.component
     SectionComponent,
     RequestComponent,
     DoubleSectionComponent,
+    PricesComponent,
+    PriceComponent,
   ],
   imports: [
     CommonModule,
