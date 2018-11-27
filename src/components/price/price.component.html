@@ -1,0 +1,31 @@
+<div class="price"
+     (mouseover)="makeActive()"
+     (mouseout)="makeInactive()">
+  <div class="price_background"
+       [ngStyle]="{'background-image': 'url(' + data.imgSrc + ')'}"
+       [ngClass]="data.transition ? data.transition : ''"></div>
+  <h1 class="price_title">{{data.title}}</h1>
+  <div class="price_description"
+       [class.price_description_active]="active">
+    <div class="price_description_wrapper">
+        <div class="price_description_header">
+          <div>{{data.title}}</div>
+        </div>
+        <div class="price_description_item">
+          <div>Час от:</div>
+          <div>{{data.perHourPrice}}</div>
+        </div>
+        <div class="price_description_item">
+          <div>День от :</div>
+          <div>{{data.perDayPrice}}</div>
+        </div>
+        <div class="price_description_item">
+          <div>Месяц от:</div>
+          <div>{{data.perMonthPrice}}</div>
+        </div>
+        <div class="price_description_title">
+          <div (click)="doScroll()">Заказать</div>
+        </div>
+    </div>
+  </div>
+</div>

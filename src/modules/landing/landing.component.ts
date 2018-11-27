@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { SmoothScroll } from '../../directives/scroll.directive';
 
+const COLOR_SECOND_GREY = '#F3F3F3';
+const COLOR_FIRST = '#fff';
+
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
@@ -9,13 +12,13 @@ import { SmoothScroll } from '../../directives/scroll.directive';
 export class LandingComponent {
   sections: any[] = [
     {
-      title: 'Персонал',
-      bgColor: '#F7F7F7',
+      title: 'Подбор Персонала',
+      bgColor: COLOR_FIRST,
       scrollToId: 'personal',
       items: [
         {
-          title: 'Няня',
-          imgSrc: 'assets/img/nyania.webp',
+          title: 'Услуги Няни',
+          imgSrc: 'assets/img/nyania.jpeg',
           description: `Надежным помощником для вашего малыша станет няня воспитатель. Это
 квалифицированный специалист со среднеспециальным или высшим
 педагогическим образованием, который возьмет на себя ответственность за
@@ -30,8 +33,8 @@ export class LandingComponent {
           reverse: true,
         },
         {
-          title: 'Гувернантка',
-          imgSrc: 'assets/img/huvernantka.webp',
+          title: 'Услуги Гувернантки',
+          imgSrc: 'assets/img/huvernantka.jpeg',
           description: `Гувернантка сопровождает ребенка в кружки, секции, помогает делать школьные
 домашние задания и проверяет их. Домашняя учительница также организует досуг
 детей, знакомит с этикетом, обучает поведению в обществе. Наши педагоги владеют
@@ -44,8 +47,8 @@ export class LandingComponent {
 детей.`,
         },
         {
-          title: 'Домработница',
-          imgSrc: 'assets/img/domorabot.webp',
+          title: 'Услуги Домработницы',
+          imgSrc: 'assets/img/domorabot.jpeg',
           description: `Горничная или домработница поддержит чистоту и порядок, приготовит пищу,
 организует покупку продуктов и оплату счетов, осуществит сезонные работы в доме.
 
@@ -57,8 +60,8 @@ export class LandingComponent {
 организует покупку продуктов и оплату счетов, осуществит сезонные работы в доме.`,
         },
         {
-          title: 'Сиделка',
-          imgSrc: 'assets/img/sidelka.webp',
+          title: 'Услуги Сиделки',
+          imgSrc: 'assets/img/sidelka.jpeg',
           description: `Сиделка будет приходить либо постоянно проживать дома с больным и следить за
 его самочувствием. При необходимости оказывает первичную помощь,  делать
 нужные медицинские процедуры по указаниям врача.Пожилой или больной
@@ -67,8 +70,8 @@ export class LandingComponent {
 его самочувствием.`,
         },
         {
-          title: 'Повар',
-          imgSrc: 'assets/img/povar.webp',
+          title: 'Услуги Повара',
+          imgSrc: 'assets/img/povar.jpeg',
           description: `Наши повара обладают фантазией, даром импровизации, чувством прекрасного, тонким вкусом
 (в том числе и эстетическим). К тому же, у нас повара имеют безупречный глазомер, для точного
 смешивания ингредиентов и добавления в нужных пропорциях. Более того, наши кандидаты
@@ -80,8 +83,8 @@ export class LandingComponent {
           Наш кулинар не только готовить качественные блюда, но и готовить их быстро.`,
         },
         {
-          title: 'Водитель',
-          imgSrc: 'assets/img/voditel.webp',
+          title: 'Услуги Водителя',
+          imgSrc: 'assets/img/voditel.jpeg',
           description: `Наши водителя — это сервис высшего качества. Отлично знают город, терпеливые и
 тактичные. А уж профессиональные навыки, безаварийная езда и тотальное соблюдение
 ПДД – это даже не обсуждается. Помимо перевозки, наши водителя помогают клиенту в
@@ -93,8 +96,8 @@ export class LandingComponent {
 тактичные.`,
         },
         {
-          title: 'Садовник-Хозяйственник',
-          imgSrc: 'assets/img/sadovnik.webp',
+          title: 'Услуги Садовника-Хозяйственника',
+          imgSrc: 'assets/img/sadovnik.jpeg',
           description: `Наш садовник Вам сделает ухоженный сад и дачный участок. Сможет предоставить качественный
 уход за экзотическими растениями, маленьким водопадом или каменными дорожками. Мы
 сможем вам предоставить садовника - профессионала, который воплотит все ваши мечты в
@@ -104,8 +107,8 @@ export class LandingComponent {
           mobileDescription: `Наш садовник Вам сделает ухоженный сад и дачный участок.`,
         },
         {
-          title: 'Гардеробщица',
-          imgSrc: 'assets/img/hardirobchik.webp',
+          title: 'Услуги Гардеробщицы',
+          imgSrc: 'assets/img/hardirobchik.jpeg',
           description: `Наш специалист по гардеробу осуществляет уход за гардеробной комнатой и ведет
 домашнее хозяйство, связанное с гардеробом. Ткани, из которых сшит VIP-
 гардероб, имеют высокую стоимость и могут быть очень хрупкими. Специалист
@@ -118,8 +121,8 @@ export class LandingComponent {
 домашнее хозяйство, связанное с гардеробом.`,
         },
         {
-          title: 'Семейная пара',
-          imgSrc: 'assets/img/simeyna_para.webp',
+          title: 'Услуги Семейной пары',
+          imgSrc: 'assets/img/simeyna_para.jpeg',
           description: `В процессе поиска семейной пары мы видим своей задачей найти семью, члены которой в равной
 степени являются высококвалифицированными специалистами, по всем возложенным на них
 функциональным обязанностям. Мужчина выполняет обязанности садовника, сантехника, электрика,
@@ -133,8 +136,8 @@ export class LandingComponent {
 помощь.`,
         },
         {
-          title: 'Охрана',
-          imgSrc: 'assets/img/security_2.webp',
+          title: 'Услуги Охраны',
+          imgSrc: 'assets/img/security_2.jpeg',
           description: `Загородный дом должен иметь защиту, которую смогут предоставить наши охранники. В случае
 проникновения нежелательных гостей на участок или в дом,наши кандидаты смогут остановить
 процесс кражи, а в идеале — задержать воров на месте преступления. Наши кандидаты
@@ -147,8 +150,8 @@ export class LandingComponent {
   ];
 
   clients = {
-      title: '',
-      bgColor: '#D3D3D1',
+      title: 'Агентство домашнего персонала Family Service',
+      bgColor: COLOR_SECOND_GREY,
       scrollToId: 'forCustomers',
       firstItem: {
         title: 'Клиентам',
@@ -179,7 +182,7 @@ export class LandingComponent {
 
   workWithAgency = {
     title: 'О Нас',
-    bgColor: '#D3D3D1',
+    bgColor: COLOR_SECOND_GREY,
     scrollToId: 'aboutUs',
     generalDescription: `
       Мы – профессионалы своего дела! Опыт наших специалистов в сфере подбора домашнего персонала, составляет уже более

@@ -1,0 +1,37 @@
+@import '../../constants';
+
+.prices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 50px 12.5%;
+
+  &_title {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid @color_red;
+    color: @color_grey;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+
+    &:hover {
+      color: @color_red;
+    }
+  }
+}
+
+
+@media screen and (max-width: 853px) {
+  .prices {
+    padding: 50px 5%;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .prices {
+    justify-content: center;
+  }
+}
