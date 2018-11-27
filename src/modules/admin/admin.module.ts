@@ -1,30 +1,36 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AddComponent } from './add.component';
-import { AddRoutingModule } from './add.routing';
+import { AdminComponent } from './admin.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {TextMaskModule} from 'angular2-text-mask';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {HttpClientModule} from '@angular/common/http';
+import {AdminRoutingModule} from './admin.routing';
+import {MatTabsModule} from '@angular/material/tabs';
+import {RemoveFormComponent} from '../../components/removeForm/removeForm.component';
+import {AddVacantionComponent} from '../../components/addVacantion/addVacantion.component';
 
 @NgModule({
   declarations: [
-    AddComponent,
+    AdminComponent,
+    RemoveFormComponent,
+    AddVacantionComponent
   ],
   imports: [
     CommonModule,
-    AddRoutingModule,
+    AdminRoutingModule,
     MatInputModule,
     MatSelectModule,
     TextMaskModule,
     ReactiveFormsModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTabsModule
   ],
   providers: [
   ],
-  bootstrap: [AddComponent]
+  bootstrap: [AdminComponent]
 })
-export class AddModule { }
+export class AdminModule { }

@@ -17,12 +17,16 @@ const routes: Routes = [
     loadChildren: '../modules/personal/personal.module#PersonalModule',
   },
   {
-    path: 'add/',
-    redirectTo: 'add',
+    path: 'admin/',
+    redirectTo: 'admin',
   },
   {
-    path: 'add',
-    loadChildren: '../modules/add/add.module#AddModule',
+    path: 'admin',
+    loadChildren: '../modules/admin/admin.module#AdminModule',
+  },
+  {
+    path: '**',
+    redirectTo: '',
   },
 ]
 

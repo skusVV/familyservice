@@ -1,0 +1,17 @@
+<div [formGroup]="form" class="form">
+  <mat-form-field class="form_item">
+    <input matInput placeholder="Укажите название"
+           formControlName="title">
+  </mat-form-field>
+  Условия:
+  <div formArrayName="conditions">
+    <mat-form-field class="form_item"
+                    *ngFor="let condition of conditions.controls; index as i"
+                    [formGroupName]="i">
+      <input matInput placeholder="Добавьте условие"
+             formControlName="condition">
+    </mat-form-field>
+  </div>
+  <span (click)="addCondition()" class="form_add">+</span>
+  <button mat-raised-button color="accent" type="submit" (click)="submitForm()">Отправить Заявку</button>
+</div>

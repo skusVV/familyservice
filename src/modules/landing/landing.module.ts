@@ -17,6 +17,8 @@ import {ContactsComponent} from '../../components/contacts/contacts.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {LandingRoutingModule} from './landing.routes';
+import {PricesComponent} from '../../components/prices/prices.component';
+import {PriceComponent} from '../../components/price/price.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import {LandingRoutingModule} from './landing.routes';
     HeaderComponent,
     FooterComponent,
     SmoothScrollToDirective,
-    ContactsComponent
+    ContactsComponent,
+    PricesComponent,
+    PriceComponent,
   ],
   imports: [
     CommonModule,
