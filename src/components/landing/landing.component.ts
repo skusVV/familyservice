@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { SmoothScroll } from '../../directives/scroll.directive';
 
+const COLOR_SECOND_GREY = '#F3F3F3';
+const COLOR_FIRST = '#fff';
+
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
@@ -10,7 +13,7 @@ export class LandingComponent {
   sections: any[] = [
     {
       title: 'Подбор Персонала',
-      bgColor: '#F7F7F7',
+      bgColor: COLOR_FIRST,
       scrollToId: 'personal',
       items: [
         {
@@ -104,7 +107,7 @@ export class LandingComponent {
           mobileDescription: `Наш садовник Вам сделает ухоженный сад и дачный участок.`,
         },
         {
-          title: 'Услуги Гардеробщици',
+          title: 'Услуги Гардеробщицы',
           imgSrc: 'assets/img/hardirobchik.jpeg',
           description: `Наш специалист по гардеробу осуществляет уход за гардеробной комнатой и ведет
 домашнее хозяйство, связанное с гардеробом. Ткани, из которых сшит VIP-
@@ -148,7 +151,7 @@ export class LandingComponent {
 
   clients = {
       title: 'Агентство домашнего персонала Family Service',
-      bgColor: '#D3D3D1',
+      bgColor: COLOR_SECOND_GREY,
       scrollToId: 'forCustomers',
       firstItem: {
         title: 'Клиентам',
@@ -179,7 +182,7 @@ export class LandingComponent {
 
   workWithAgency = {
     title: 'О Нас',
-    bgColor: '#D3D3D1',
+    bgColor: COLOR_SECOND_GREY,
     scrollToId: 'aboutUs',
     generalDescription: `
       Мы – профессионалы своего дела! Опыт наших специалистов в сфере подбора домашнего персонала, составляет уже более
