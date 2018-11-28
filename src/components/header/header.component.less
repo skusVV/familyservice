@@ -160,6 +160,8 @@
 
 @media screen and (max-width: 900px) {
   .header {
+    height: 80px;
+
     &_navigation {
       display: none;
     }
@@ -172,13 +174,20 @@
 
 @media screen and (max-width: 560px) {
   .header {
+    height: 75px;
+
+    &_burger {
+      margin-left: 10px;
+    }
+
     &_logo {
-      transform: translate(-110%);
+      transform: translate(-100%);
     }
 
     &_contact {
       &_button {
-        padding: 0 15px;
+        font-size: 12px;
+        padding: 0 10px;
         height: 40%;
       }
     }
