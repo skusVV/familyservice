@@ -10,7 +10,7 @@ export class AppComponent {
     title: 'Контакты',
     scrollToId: 'contacts',
     firstItem: {
-      title: 'Телефон для соискателей',
+      title: 'Телефоны для соискателей',
       description: 'Консультации по трудоустройству:',
       phones: [
         {

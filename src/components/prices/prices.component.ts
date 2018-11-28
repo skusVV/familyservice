@@ -28,7 +28,7 @@ export class PricesComponent {
       perHourPrice: '80 грн.',
       perDayPrice: '700 грн.',
       perMonthPrice: '14 000 грн.',
-      imgSrc: 'assets/img/domorabot.jpeg',
+      imgSrc: 'assets/img/domrab_price.jpg',
       transition: 'domorabot',
     },
     {
@@ -36,7 +36,7 @@ export class PricesComponent {
       perHourPrice: '30 грн.',
       perDayPrice: '250 грн.',
       perMonthPrice: '6000 грн.',
-      imgSrc: 'assets/img/sidelka.jpeg',
+      imgSrc: 'assets/img/sidelka_price.jpg',
       transition: 'sidelka',
     },
     {
@@ -44,7 +44,7 @@ export class PricesComponent {
       perHourPrice: '80 грн.',
       perDayPrice: '500 грн.',
       perMonthPrice: '8 000 грн.',
-      imgSrc: 'assets/img/povar.jpeg',
+      imgSrc: 'assets/img/povar_price.jpg',
       transition: 'povar',
     },
     {
