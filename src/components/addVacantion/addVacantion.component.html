@@ -1,17 +1,36 @@
 <div [formGroup]="form" class="form">
   <mat-form-field class="form_item">
-    <input matInput placeholder="Укажите название"
+    <input matInput placeholder="Заголовок"
            formControlName="title">
   </mat-form-field>
-  Условия:
-  <div formArrayName="conditions">
+  <mat-form-field class="form_item">
+    <input matInput placeholder="Место работы"
+           formControlName="location">
+  </mat-form-field>
+  <mat-form-field class="form_item">
+    <input matInput placeholder="Зарплата (грн)"
+           type="number"
+           formControlName="title">
+  </mat-form-field>
+
+  <div formArrayName="blocks" class="form_block" *ngFor="let item of blocks.controls; index as i">
     <mat-form-field class="form_item"
-                    *ngFor="let condition of conditions.controls; index as i"
                     [formGroupName]="i">
-      <input matInput placeholder="Добавьте условие"
-             formControlName="condition">
+      <input matInput placeholder="Заголовок блока"
+             formControlName="blockTitle">
     </mat-form-field>
+    <mat-form-field class="form_item"
+                    [formGroupName]="i">
+      <textarea matInput placeholder="Впишите текст" formControlName="text" rows="5"></textarea>
+    </mat-form-field>
+    <mat-radio-group [formGroupName]="i">
+      <mat-radio-button class="form_radio_button" *ngFor="let val of radio" [value]="val" (change)="radioChange($event, i)">
+        {{val}}
+      </mat-radio-button>
+    </mat-radio-group>
   </div>
-  <span (click)="addCondition()" class="form_add">+</span>
-  <button mat-raised-button color="accent" type="submit" (click)="submitForm()">Отправить Заявку</button>
+  <button mat-raised-button color="primary" type="submit" (click)="addBlock()">Добавить блок</button>
+
+
+  <button mat-raised-button color="accent" type="submit" (click)="submitForm()">Добавить вакансию</button>
 </div>

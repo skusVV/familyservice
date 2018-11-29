@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AdminComponent } from './admin.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
+import {MatRadioModule} from '@angular/material/radio';
 import {TextMaskModule} from 'angular2-text-mask';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
@@ -27,7 +28,8 @@ import {AddVacantionComponent} from '../../components/addVacantion/addVacantion.
     ReactiveFormsModule,
     MatButtonModule,
     HttpClientModule,
-    MatTabsModule
+    MatTabsModule,
+    MatRadioModule
   ],
   providers: [
   ],
