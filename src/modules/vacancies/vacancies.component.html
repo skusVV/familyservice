@@ -1,3 +1,9 @@
 <div class="section">
-  <app-vacancies-list class="vacancies" [isAdmin]="false" [vacancies]="vacancies"></app-vacancies-list>
+  <div infinite-scroll
+       [infiniteScrollDistance]="scrollDistance"
+       [infiniteScrollUpDistance]="scrollUpDistance"
+       [infiniteScrollThrottle]="throttle"
+       (scrolled)="onScrollDown()">
+      <app-vacancies-list class="vacancies" [isAdmin]="false" [vacancies]="vacancies"></app-vacancies-list>
+  </div>
 </div>

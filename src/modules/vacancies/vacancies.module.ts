@@ -5,6 +5,7 @@ import { VacanciesRoutingModule } from './vacancies.routing';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {HttpClientModule} from '@angular/common/http';
 import {SharedModule} from '../shared.module';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {SharedModule} from '../shared.module';
     VacanciesRoutingModule,
     MatExpansionModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
+    InfiniteScrollModule
   ],
   providers: [
   ],

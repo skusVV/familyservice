@@ -39,6 +39,7 @@
     "angular2-text-mask": "^9.0.0",
     "core-js": "^2.5.4",
     "cors": "~2.8.4",
+    "ngx-infinite-scroll": "^6.0.1",
     "rxjs": "~6.2.0",
     "rxjs-compat": "^6.3.3",
     "ts-loader": "4.2.0",
