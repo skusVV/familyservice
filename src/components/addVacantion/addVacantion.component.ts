@@ -28,9 +28,6 @@ export class AddVacantionComponent {
     };
     this.onAdd.emit(data);
     this.form  = this.createForm();
-    // this.http.post('/api/vacancy', data).subscribe(() => {
-    //   this.form  = this.createForm();
-    // });
   }
 
   createBlock(): any {
@@ -55,7 +52,6 @@ export class AddVacantionComponent {
       location: new FormControl(''),
       salary: new FormControl(''),
       blocks: this.formBuilder.array([ this.createBlock() ]),
-      // id will added before submit
     });
   }
 }

@@ -4,7 +4,6 @@ import { AdminComponent } from './admin.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatRadioModule} from '@angular/material/radio';
-// import {TextMaskModule} from 'angular2-text-mask';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {HttpClientModule} from '@angular/common/http';
@@ -28,7 +27,6 @@ import {VacanciesListComponent} from '../../components/vacanciesList/vacanciesLi
     AdminRoutingModule,
     MatInputModule,
     MatSelectModule,
-    // TextMaskModule,
     ReactiveFormsModule,
     MatButtonModule,
     HttpClientModule,
