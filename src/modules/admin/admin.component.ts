@@ -28,9 +28,11 @@ export class AdminComponent implements OnInit {
   }
 
   remove(id: string) {
-    this.http.post('/api/deleteVacancy', id).subscribe(() => {
-      this.vacancies = this.vacancies.filter(item => item._id !== id);
-    });
+    if (confirm('Вы уверены??')) {
+      this.http.post('/api/deleteVacancy', id).subscribe(() => {
+        this.vacancies = this.vacancies.filter(item => item._id !== id);
+      });
+    }
   }
 
   add(data: any) {

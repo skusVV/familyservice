@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule,
   // PreloadAllModules
 } from '@angular/router';
+import {VacanciesModule} from '../modules/vacancies/vacancies.module';
 
 const routes: Routes = [
   {
@@ -23,6 +24,14 @@ const routes: Routes = [
   {
     path: 'admin',
     loadChildren: '../modules/admin/admin.module#AdminModule',
+  },
+  {
+    path: 'vacancies/',
+    redirectTo: 'vacancies',
+  },
+  {
+    path: 'vacancies',
+    loadChildren: '../modules/vacancies/vacancies.module#VacanciesModule',
   },
   {
     path: '**',

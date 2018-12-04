@@ -1,0 +1,26 @@
+<div class="vacancy">
+  <mat-accordion class="vacancy_accordion" *ngFor="let vacancy of vacancies">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header class="vacancy_header-mat" collapsedHeight="75px">
+        <div class="vacancy_header">
+          <div class="vacancy_title">
+            {{vacancy.title}}
+          </div>
+          <div class="vacancy_subtitle">
+            <div class="vacancy_place">
+              <div class="field_name">Место работы: </div>
+              <div class="field_value">{{vacancy.location}};</div>
+            </div>
+            <div class="vacancy_price">
+              <div class="field_name">Зарплата: </div>
+              <div class="field_value">{{vacancy.salary}} грн.</div>
+            </div>
+          </div>
+        </div>
+        <span *ngIf="isAdmin" class="remove"  (click)="removeElement(vacancy)">remove</span>
+      </mat-expansion-panel-header>
+      add VacancyDescription component
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+<div *ngIf="!vacancies || vacancies && !vacancies.length">Вакансии отсутсвуюют</div>

@@ -1,11 +1,11 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-vacancies',
-  templateUrl: './vacancies.component.html',
-  styleUrls: ['./vacancies.component.less']
+  selector: 'app-vacancies-list',
+  templateUrl: './vacanciesList.component.html',
+  styleUrls: ['./vacanciesList.component.less']
 })
-export class VacanciesComponent {
+export class VacanciesListComponent {
   @Input() vacancies: any;
   @Input() isAdmin: boolean;
   @Output() onRemove: EventEmitter<string> = new EventEmitter();

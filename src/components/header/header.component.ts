@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -7,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.less']
 })
 export class HeaderComponent {
+
+  constructor(private router: Router) {
+  }
+
+  get isAdmin() {
+    return this.router.url === '/admin';
+  }
 
 }

@@ -10,12 +10,12 @@ import { TextMaskModule } from 'angular2-text-mask';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DoubleSectionComponent } from '../../components/doubleSection/doubleSection.component';
-import {HeaderComponent} from '../../components/header/header.component';
+// import {HeaderComponent} from '../../components/header/header.component';
 import {FooterComponent} from '../../components/footer/footer.component';
 import {SmoothScrollToDirective} from '../../directives/scroll.directive';
 import {ContactsComponent} from '../../components/contacts/contacts.component';
-import {MatIconModule} from '@angular/material/icon';
-import {MatMenuModule} from '@angular/material/menu';
+// import {MatIconModule} from '@angular/material/icon';
+// import {MatMenuModule} from '@angular/material/menu';
 import {LandingRoutingModule} from './landing.routes';
 import {PricesComponent} from '../../components/prices/prices.component';
 import {PriceComponent} from '../../components/price/price.component';
@@ -26,7 +26,7 @@ import {PriceComponent} from '../../components/price/price.component';
     SectionComponent,
     RequestComponent,
     DoubleSectionComponent,
-    HeaderComponent,
+    // HeaderComponent,
     FooterComponent,
     SmoothScrollToDirective,
     ContactsComponent,
@@ -42,8 +42,8 @@ import {PriceComponent} from '../../components/price/price.component';
     MatButtonModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatMenuModule,
-    MatIconModule,
+    // MatMenuModule,
+    // MatIconModule,
   ],
   providers: [
   ]

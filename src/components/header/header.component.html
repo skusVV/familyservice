@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" *ngIf="!isAdmin">
   <nav class="header_burger">
     <button mat-icon-button [matMenuTriggerFor]="menu">
       <div class="header_burger_dots"></div>
@@ -19,6 +19,9 @@
       <button mat-menu-item>
         <span scrollTo="contacts">Контакты</span>
       </button>
+      <button mat-menu-item>
+        <span> <a href="/vacancies">Вакансии</a></span>
+      </button>
     </mat-menu>
   </nav>
   <nav class="header_navigation">
@@ -27,6 +30,9 @@
       <div class="header_navigation_item" scrollTo="aboutUs">О нас</div>
       <div class="header_navigation_item" scrollTo="prices">Цены</div>
       <div class="header_navigation_item" scrollTo="footer">Контакты</div>
+      <div class="header_navigation_item">
+        <a routerLink="/vacancies" routerLinkActive="active">Вакансии</a>
+      </div>
   </nav>
   <div class="header_logo">
     <img src="assets/img/logo.png" alt="logo" scrollTo="body">
