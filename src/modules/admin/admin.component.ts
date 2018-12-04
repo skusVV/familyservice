@@ -12,16 +12,20 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AdminComponent implements OnInit {
   data: any;
-  login: string;
-  password: string;
+  auth: any;
+  // login: string;
+  // password: string;
   vacancies: any;
 
   constructor(private route: ActivatedRoute, private http: HttpClient) {}
 
   ngOnInit() {
     this.data = this.route.snapshot.data.data;
-    this.login = this.data.payload.login;
-    this.password = this.data.payload.password;
+    this.auth = {
+      login: this.data.payload.login,
+      password: this.data.payload.password
+    };
+
     this.http.get('/api/vacancies').subscribe((res: any) => {
       this.vacancies = res.data;
     });
@@ -29,14 +33,14 @@ export class AdminComponent implements OnInit {
 
   remove(id: string) {
     if (confirm('Вы уверены??')) {
-      this.http.post('/api/deleteVacancy', id).subscribe(() => {
+      this.http.post('/api/deleteVacancy', {auth: this.auth, id}).subscribe(() => {
         this.vacancies = this.vacancies.filter(item => item._id !== id);
       });
     }
   }
 
   add(data: any) {
-    this.http.post('/api/vacancy', data).subscribe(() => {
+    this.http.post('/api/vacancy', {auth: this.auth, data}).subscribe(() => {
       this.vacancies = [...this.vacancies, data];
     });
   }
