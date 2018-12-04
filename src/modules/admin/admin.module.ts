@@ -4,6 +4,7 @@ import { AdminComponent } from './admin.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatRadioModule} from '@angular/material/radio';
+// import {TextMaskModule} from 'angular2-text-mask';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {HttpClientModule} from '@angular/common/http';
@@ -14,27 +15,28 @@ import {AddVacantionComponent} from '../../components/addVacantion/addVacantion.
 import {AdminResolver} from './admin.resolver';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {VacanciesListComponent} from '../../components/vacanciesList/vacanciesList.component';
-import {VacancyBlockComponent} from '../../components/vacancyBlock/vacancyBlock.component';
+import {SharedModule} from '../shared.module';
 
 @NgModule({
   declarations: [
     AdminComponent,
     RemoveFormComponent,
     AddVacantionComponent,
-    VacanciesListComponent,
-    VacancyBlockComponent
+    // VacanciesListComponent
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
     MatInputModule,
     MatSelectModule,
+    // TextMaskModule,
     ReactiveFormsModule,
     MatButtonModule,
     HttpClientModule,
     MatTabsModule,
     MatRadioModule,
-    MatExpansionModule
+    MatExpansionModule,
+    SharedModule
   ],
   providers: [
     AdminResolver

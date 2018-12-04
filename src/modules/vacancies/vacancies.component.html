@@ -1,3 +1,9 @@
 <div class="section">
   <app-vacancies-list class="vacancies" [isAdmin]="false" [vacancies]="vacancies"></app-vacancies-list>
+  <mat-paginator class="pagination"
+                 *ngIf="vacancies && vacancies.length > 10"
+                 [length]="vacancies.length"
+                 [pageSize]="10"
+                 [pageSizeOptions]="[5, 10, 25, 100]">
+  </mat-paginator>
 </div>

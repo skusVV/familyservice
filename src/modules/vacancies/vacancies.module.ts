@@ -6,18 +6,22 @@ import {VacanciesListComponent} from '../../components/vacanciesList/vacanciesLi
 import {MatExpansionModule} from '@angular/material/expansion';
 import {HttpClientModule} from '@angular/common/http';
 import {VacancyBlockComponent} from '../../components/vacancyBlock/vacancyBlock.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {SharedModule} from '../shared.module';
 
 @NgModule({
   declarations: [
     VacanciesComponent,
-    VacanciesListComponent,
-    VacancyBlockComponent,
+    // VacanciesListComponent,
+    // VacancyBlockComponent,
   ],
   imports: [
     CommonModule,
     VacanciesRoutingModule,
     MatExpansionModule,
-    HttpClientModule
+    HttpClientModule,
+    MatPaginatorModule,
+    SharedModule
   ],
   providers: [
   ],
