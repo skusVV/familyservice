@@ -12,12 +12,16 @@ import {AdminRoutingModule} from './admin.routing';
 import {MatTabsModule} from '@angular/material/tabs';
 import {RemoveFormComponent} from '../../components/removeForm/removeForm.component';
 import {AddVacantionComponent} from '../../components/addVacantion/addVacantion.component';
+import { AdminResolver } from './admin.resolver';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {VacanciesComponent} from '../../components/vacancies/vacancies.component';
 
 @NgModule({
   declarations: [
     AdminComponent,
     RemoveFormComponent,
-    AddVacantionComponent
+    AddVacantionComponent,
+    VacanciesComponent
   ],
   imports: [
     CommonModule,
@@ -29,9 +33,11 @@ import {AddVacantionComponent} from '../../components/addVacantion/addVacantion.
     MatButtonModule,
     HttpClientModule,
     MatTabsModule,
-    MatRadioModule
+    MatRadioModule,
+    MatExpansionModule
   ],
   providers: [
+    AdminResolver
   ],
   bootstrap: [AdminComponent]
 })

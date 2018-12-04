@@ -1,5 +1,4 @@
-import { Component} from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
+import { Component, Output, EventEmitter, Input} from '@angular/core';
 
 @Component({
   selector: 'app-remove',
@@ -7,15 +6,10 @@ import {FormControl, FormGroup} from '@angular/forms';
   styleUrls: ['./removeForm.component.less'],
 })
 export class RemoveFormComponent {
-  form = new FormGroup({
-    id: new FormControl(''),
-  });
+  @Input() vacancies: any;
+  @Output() onRemove = new EventEmitter();
 
-  submitForm() {
-    const data = this.form.getRawValue();
-    console.log(data);
-    // this.http.post('api/request', data).subscribe(() => {
-    //   this.showAfterSendMessage = true;
-    // });
+  remove(id) {
+    this.onRemove.emit(id);
   }
 }

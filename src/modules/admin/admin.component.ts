@@ -1,7 +1,8 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import {Component, ViewEncapsulation, OnInit} from '@angular/core';
 import {allPersonal, phoneMask} from '../../constants';
 import {FormControl, FormGroup} from '@angular/forms';
 import {HttpClient} from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-admin',
@@ -9,24 +10,32 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['./admin.component.less'],
   encapsulation: ViewEncapsulation.None,
 })
-export class AdminComponent {
-  // selectOptions = allPersonal;
-  // mask = phoneMask;
-  // form = new FormGroup({
-  //   title: new FormControl(''),
-  //   // secondName: new FormControl(''),
-  //   // birthDay: new FormControl(''),
-  //   // phone: new FormControl(''),
-  //   // type: new FormControl(''),
-  //   // salary: new FormControl(''),
-  //   // about: new FormControl(''),
-  // });
-  //
-  // constructor(private http: HttpClient) {
-  // }
-  //
-  // submitForm() {
-  //   const data = this.form.getRawValue();
-  //   this.http.post('api/addNewPerson', data).subscribe();
-  // }
+export class AdminComponent implements OnInit {
+  data: any;
+  login: string;
+  password: string;
+  vacancies: any;
+
+  constructor(private route: ActivatedRoute, private http: HttpClient) {}
+
+  ngOnInit() {
+    this.data = this.route.snapshot.data.data;
+    this.login = this.data.payload.login;
+    this.password = this.data.payload.password;
+    this.http.get('/api/vacancies').subscribe((res: any) => {
+      this.vacancies = res.data;
+    });
+  }
+
+  remove(id: string) {
+    this.http.post('/api/deleteVacancy', id).subscribe(() => {
+      this.vacancies = this.vacancies.filter(item => item._id !== id);
+    });
+  }
+
+  add(data: any) {
+    this.http.post('/api/vacancy', data).subscribe(() => {
+      this.vacancies = [...this.vacancies, data];
+    });
+  }
 }

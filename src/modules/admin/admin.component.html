@@ -1,8 +1,8 @@
 <mat-tab-group>
   <mat-tab label="Добавить Вакансию ">
-    <app-add-vacantion></app-add-vacantion>
+    <app-add-vacantion (onAdd)="add($event)"></app-add-vacantion>
   </mat-tab>
   <mat-tab label="Удалить Вакансию">
-    <app-remove></app-remove>
+    <app-remove [vacancies]="vacancies" (onRemove)="remove($event)"></app-remove>
   </mat-tab>
 </mat-tab-group>

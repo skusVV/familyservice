@@ -1,0 +1,14 @@
+<div *ngFor="let vacancy of vacancies">
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        {{vacancy.title}} ?
+        {{vacancy.location}} ?
+        (({{vacancy.salary}} (((?
+        <span *ngIf="isAdmin" (click)="removeElement(vacancy)">remove</span>
+      </mat-expansion-panel-header>
+      lololo
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+<div *ngIf="!vacancies || vacancies && !vacancies.length">Вакансии отсутсвуюют</div>

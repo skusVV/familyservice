@@ -1,7 +1,5 @@
-import { Component} from '@angular/core';
+import { Component, Output, EventEmitter} from '@angular/core';
 import {FormControl, FormGroup, FormBuilder, FormArray} from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
-import * as uuid from 'uuid/v4';
 
 @Component({
   selector: 'app-add-vacantion',
@@ -9,10 +7,11 @@ import * as uuid from 'uuid/v4';
   styleUrls: ['./addVacantion.component.less'],
 })
 export class AddVacantionComponent {
-  form = this.createForm();
+  @Output() onAdd = new EventEmitter();
 
+  form = this.createForm();
   radio = ['free', 'tags', 'subtitle'];
-  constructor(private formBuilder: FormBuilder, private http: HttpClient) {}
+  constructor(private formBuilder: FormBuilder) {}
 
 
   get blocks(): FormArray {
@@ -26,13 +25,12 @@ export class AddVacantionComponent {
       location,
       salary,
       blocks,
-      id: uuid(),
-      data: new Date(),
     };
-
-    this.http.post('api/vacancy', data).subscribe(() => {
-      this.form  = this.createForm();
-    });
+    this.onAdd.emit(data);
+    this.form  = this.createForm();
+    // this.http.post('/api/vacancy', data).subscribe(() => {
+    //   this.form  = this.createForm();
+    // });
   }
 
   createBlock(): any {
@@ -57,7 +55,6 @@ export class AddVacantionComponent {
       location: new FormControl(''),
       salary: new FormControl(''),
       blocks: this.formBuilder.array([ this.createBlock() ]),
-      // date will added before submit
       // id will added before submit
     });
   }
