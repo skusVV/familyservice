@@ -13,8 +13,6 @@ import { ActivatedRoute } from '@angular/router';
 export class AdminComponent implements OnInit {
   data: any;
   auth: any;
-  // login: string;
-  // password: string;
   vacancies: any;
 
   constructor(private route: ActivatedRoute, private http: HttpClient) {}
