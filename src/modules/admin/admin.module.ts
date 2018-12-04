@@ -14,13 +14,15 @@ import {AddVacantionComponent} from '../../components/addVacantion/addVacantion.
 import {AdminResolver} from './admin.resolver';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {VacanciesListComponent} from '../../components/vacanciesList/vacanciesList.component';
+import {VacancyBlockComponent} from '../../components/vacancyBlock/vacancyBlock.component';
 
 @NgModule({
   declarations: [
     AdminComponent,
     RemoveFormComponent,
     AddVacantionComponent,
-    VacanciesListComponent
+    VacanciesListComponent,
+    VacancyBlockComponent
   ],
   imports: [
     CommonModule,

@@ -5,11 +5,13 @@ import { VacanciesRoutingModule } from './vacancies.routing';
 import {VacanciesListComponent} from '../../components/vacanciesList/vacanciesList.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {HttpClientModule} from '@angular/common/http';
+import {VacancyBlockComponent} from '../../components/vacancyBlock/vacancyBlock.component';
 
 @NgModule({
   declarations: [
     VacanciesComponent,
     VacanciesListComponent,
+    VacancyBlockComponent,
   ],
   imports: [
     CommonModule,

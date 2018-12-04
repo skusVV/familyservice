@@ -1,0 +1,17 @@
+<div class="block">
+  <div class="block_title" *ngIf="block.blockTitle">{{block.blockTitle}}</div>
+  <div class="block_free" *ngIf="block.type === 'free'">{{block.text}}</div>
+  <div class="block_tags" *ngIf="block.type === 'tags'">
+    <div class="tag" *ngFor="let tag of block.text.split('##')">
+      {{tag}}
+    </div>
+  </div>
+  <div class="block_subtitle" *ngIf="block.type === 'subtitle'">
+      <span class="block_subtitle_first" >
+        {{block.text.split('##')[0]}}
+      </span>
+      <span class="block_subtitle_second">
+        {{block.text.split('##')[1]}}
+      </span>
+  </div>
+</div>

@@ -19,7 +19,11 @@
         </div>
         <span *ngIf="isAdmin" class="remove"  (click)="removeElement(vacancy)">remove</span>
       </mat-expansion-panel-header>
-      add VacancyDescription component
+      <div class="vacancy_blocks_wrapper">
+        <div class="vacancy_block" *ngFor="let block of vacancy.blocks">
+          <app-vacancy-block [block]="block"></app-vacancy-block>
+        </div>
+      </div>
     </mat-expansion-panel>
   </mat-accordion>
 </div>
