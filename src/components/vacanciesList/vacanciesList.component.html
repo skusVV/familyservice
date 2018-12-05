@@ -9,11 +9,11 @@
           <div class="vacancy_subtitle">
             <div class="vacancy_place">
               <div class="field_name">Место работы: </div>
-              <div class="field_value">{{vacancy.location}};</div>
+              <div class="field_value">{{vacancy.location || 'Не указано'}};</div>
             </div>
             <div class="vacancy_price">
               <div class="field_name">Зарплата: </div>
-              <div class="field_value">{{vacancy.salary}} грн.</div>
+              <div class="field_value">{{vacancy.salary || 'Не указано'}} грн.</div>
             </div>
           </div>
         </div>
