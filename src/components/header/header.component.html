@@ -5,37 +5,35 @@
     </button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item>
-        <span scrollTo="forCustomers">Клиентам</span>
+        <span scrollTo="forCustomers" (click)="onClick('/', 'forCustomers')">Клиентам</span>
       </button>
       <button mat-menu-item>
-        <span scrollTo="personal">Персонал</span>
+        <span scrollTo="personal" (click)="onClick('/', 'personal')">Персонал</span>
       </button>
       <button mat-menu-item>
-        <span scrollTo="aboutUs">О нас</span>
+        <span scrollTo="aboutUs" (click)="onClick('/', 'aboutUs')">О нас</span>
       </button>
       <button mat-menu-item>
-        <span scrollTo="prices">Цены</span>
+        <span scrollTo="prices" (click)="onClick('/', 'prices')">Цены</span>
       </button>
       <button mat-menu-item>
-        <span scrollTo="contacts">Контакты</span>
+        <span scrollTo="contacts" (click)="onClick('/', 'footer')">Контакты</span>
       </button>
       <button mat-menu-item>
-        <span> <a href="/vacancies">Вакансии</a></span>
+        <span (click)="onClick('/vacancies')"> Вакансии</span>
       </button>
     </mat-menu>
   </nav>
   <nav class="header_navigation">
-      <div class="header_navigation_item" scrollTo="forCustomers">Клиентам</div>
-      <div class="header_navigation_item" scrollTo="personal">Персонал</div>
-      <div class="header_navigation_item" scrollTo="aboutUs">О нас</div>
-      <div class="header_navigation_item" scrollTo="prices">Цены</div>
-      <div class="header_navigation_item" scrollTo="footer">Контакты</div>
-      <div class="header_navigation_item">
-        <a routerLink="/vacancies" routerLinkActive="active">Вакансии</a>
-      </div>
+      <div class="header_navigation_item" (click)="onClick('/', 'forCustomers')">Клиентам</div>
+      <div class="header_navigation_item" (click)="onClick('/', 'personal')">Персонал</div>
+      <div class="header_navigation_item" (click)="onClick('/', 'aboutUs')">О нас</div>
+      <div class="header_navigation_item" (click)="onClick('/', 'prices')">Цены</div>
+      <div class="header_navigation_item" (click)="onClick('/', 'footer')">Контакты</div>
+      <div class="header_navigation_item" (click)="onClick('/vacancies')">Вакансии</div>
   </nav>
   <div class="header_logo">
-    <img src="assets/img/logo.png" alt="logo" scrollTo="body">
+    <img src="assets/img/logo.png" alt="logo" (click)="onClick('/', 'body')">
   </div>
   <div class="header_contact">
     <div class="header_contact_phone">
@@ -43,7 +41,7 @@
       <div><a href="tel:+38093866877">+38 (093) 88 66 877</a></div>
     </div>
     <div class="header_contact_button">
-      <div scrollTo="request">Заказ Персонала</div>
+      <div (click)="onClick('/', 'request')">Заказ Персонала</div>
     </div>
   </div>
 </header>
