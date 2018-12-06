@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-// import {SmoothScroll} from '../../directives/scroll.directive';
 
 @Component({
   selector: 'app-person-list',
@@ -16,7 +15,7 @@ export class PersonListComponent {
     },
     {
       title: 'Услуги Гувернантки',
-      route: '/domrabot',
+      route: '/huvernantka',
       img: 'assets/img/huvernantka.jpeg'
     },
     {
@@ -53,6 +52,11 @@ export class PersonListComponent {
       title: 'Услуги Семейной пары',
       route: '/para',
       img: 'assets/img/simeyna_para.jpeg'
+    },
+    {
+      title: 'Услуги Охраны',
+      route: '/ohrana',
+      img: 'assets/img/security_2.jpeg'
     }
   ];
 

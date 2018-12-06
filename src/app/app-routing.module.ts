@@ -2,9 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule,
   // PreloadAllModules
 } from '@angular/router';
-import {VacanciesModule} from '../modules/vacancies/vacancies.module';
-import {NaniaModule} from '../modules/nania/nania.module';
-import {CleanerModule} from '../modules/cleaner/cleaner.module';
 
 const routes: Routes = [
   {
@@ -41,7 +38,7 @@ const routes: Routes = [
   },
   {
     path: 'nania',
-    loadChildren: '../modules/nania/nania.module#NaniaModule',
+    loadChildren: '../modules/pages/nania/nania.module#NaniaModule',
   },
   {
     path: 'cleaner/',
@@ -49,13 +46,77 @@ const routes: Routes = [
   },
   {
     path: 'cleaner',
-    loadChildren: '../modules/cleaner/cleaner.module#CleanerModule',
+    loadChildren: '../modules/pages/cleaner/cleaner.module#CleanerModule',
+  },
+  {
+    path: 'ohrana/',
+    redirectTo: 'ohrana',
+  },
+  {
+    path: 'ohrana',
+    loadChildren: '../modules/pages/ohrana/ohrana.module#OhranaModule',
+  },
+  {
+    path: 'huvernantka/',
+    redirectTo: 'huvernantka',
+  },
+  {
+    path: 'huvernantka',
+    loadChildren: '../modules/pages/huvernantka/huvernantka.module#HuvernantkaModule',
+  },
+  {
+    path: 'sidelka/',
+    redirectTo: 'sidelka',
+  },
+  {
+    path: 'sidelka',
+    loadChildren: '../modules/pages/sidelka/sidelka.module#SidelkaModule',
+  },
+  {
+    path: 'povar/',
+    redirectTo: 'povar',
+  },
+  {
+    path: 'povar',
+    loadChildren: '../modules/pages/povar/povar.module#PovarModule',
+  },
+  {
+    path: 'voditel/',
+    redirectTo: 'voditel',
+  },
+  {
+    path: 'voditel',
+    loadChildren: '../modules/pages/voditel/voditel.module#VoditelModule',
+  },
+  {
+    path: 'sadovnik/',
+    redirectTo: 'sadovnik',
+  },
+  {
+    path: 'sadovnik',
+    loadChildren: '../modules/pages/sadovnik/sadovnik.module#SadovnikModule',
+  },
+  {
+    path: 'hardirobchik/',
+    redirectTo: 'hardirobchik',
+  },
+  {
+    path: 'hardirobchik',
+    loadChildren: '../modules/pages/harderobchik/harderobchik.module#HarderobchikModule',
+  },
+  {
+    path: 'para/',
+    redirectTo: 'para',
+  },
+  {
+    path: 'para',
+    loadChildren: '../modules/pages/para/para.module#ParaModule',
   },
   {
     path: '**',
     redirectTo: '',
   },
-]
+];
 
 
 @NgModule({

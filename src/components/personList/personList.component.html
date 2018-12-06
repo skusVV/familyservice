@@ -4,12 +4,12 @@
     <mat-card-header class="person-list_card_header">
       <mat-card-title class="person-list_card_title">{{card.title}}</mat-card-title>
     </mat-card-header>
-    <img mat-card-image [src]="card.img" alt="" class="person-list_card_img">
-    <!--<mat-card-content class="person_about_card_content">-->
-      <div class="person-list_button">
-        <div [routerLink]="card.route" routerLinkActive="active">Подробнее</div>
+    <div class="person-list_imgWrap">
+      <img mat-card-image [src]="card.img" alt="" class="person-list_card_img">
+    </div>
+      <div class="person-list_button" [routerLink]="card.route" routerLinkActive="active">
+        <div>Подробнее</div>
       </div>
-    <!--</mat-card-content>-->
   </mat-card>
   </div>
 </div>
