@@ -12,6 +12,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import {HttpClientModule} from '@angular/common/http';
 import {SmoothScrollToDirective} from '../directives/scroll.directive';
+import {PersonComponent} from '../components/person/person.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import {SmoothScrollToDirective} from '../directives/scroll.directive';
     VacancyBlockComponent,
     FooterComponent,
     RequestComponent,
-    SmoothScrollToDirective
+    SmoothScrollToDirective,
+    PersonComponent
   ],
   imports: [
     CommonModule,
@@ -29,13 +32,15 @@ import {SmoothScrollToDirective} from '../directives/scroll.directive';
     MatInputModule,
     MatSelectModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule
   ],
   exports: [
     VacanciesListComponent,
     VacancyBlockComponent,
     FooterComponent,
-    RequestComponent
+    RequestComponent,
+    PersonComponent
   ]
 
 })

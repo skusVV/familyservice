@@ -8,7 +8,8 @@
     </h1>
   </div>
   <app-doubleSection [section]="clients"></app-doubleSection>
-  <app-section *ngFor="let item of sections" [section]="item"></app-section>
+  <app-person-list></app-person-list>
+  <!--<app-section *ngFor="let item of sections" [section]="item"></app-section>-->
   <app-doubleSection [section]="workWithAgency"></app-doubleSection>
   <app-prices></app-prices>
   <app-request [selectOptions]="selectOptions"></app-request>

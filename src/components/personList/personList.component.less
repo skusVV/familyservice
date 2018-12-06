@@ -1,0 +1,67 @@
+@import '../../constants';
+
+.person-list{
+  background: @color_second_grey;
+  color: @color_grey;
+
+  &_wrapper {
+    //display: flex;
+  }
+
+  &_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background: @color_red;
+    border-radius: 5%;
+    border: 2px solid @color_white;
+    color: @color_white;
+    cursor: pointer;
+    padding: 0 25px;
+    transition: all .3s;
+    margin-top: 25px;
+
+    &:hover {
+      background: @color_white;
+      color: @color_red;
+      border-radius: 5%;
+      border: 2px solid @color_red;
+    }
+  }
+
+  &_card {
+    display: inline-block;
+    width: 30%;
+    margin: 20px;
+
+    &_title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    &_img{
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      max-height: 200px;
+      overflow: hidden;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .person-list {
+    &_card {
+      width: 40%;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .person-list {
+    &_card {
+      width: 100%;
+    }
+  }
+}

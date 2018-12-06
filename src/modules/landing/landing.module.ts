@@ -8,6 +8,8 @@ import {LandingRoutingModule} from './landing.routes';
 import {PricesComponent} from '../../components/prices/prices.component';
 import {PriceComponent} from '../../components/price/price.component';
 import {SharedModule} from '../shared.module';
+import {PersonListComponent} from '../../components/personList/personList.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -17,11 +19,13 @@ import {SharedModule} from '../shared.module';
     ContactsComponent,
     PricesComponent,
     PriceComponent,
+    PersonListComponent
   ],
   imports: [
     CommonModule,
     LandingRoutingModule,
-    SharedModule
+    SharedModule,
+    MatCardModule
   ],
   providers: [
   ]
