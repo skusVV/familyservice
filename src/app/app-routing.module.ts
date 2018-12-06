@@ -3,6 +3,8 @@ import { Routes, RouterModule,
   // PreloadAllModules
 } from '@angular/router';
 import {VacanciesModule} from '../modules/vacancies/vacancies.module';
+import {NaniaModule} from '../modules/nania/nania.module';
+import {CleanerModule} from '../modules/cleaner/cleaner.module';
 
 const routes: Routes = [
   {
@@ -34,10 +36,27 @@ const routes: Routes = [
     loadChildren: '../modules/vacancies/vacancies.module#VacanciesModule',
   },
   {
+    path: 'nania/',
+    redirectTo: 'nania',
+  },
+  {
+    path: 'nania',
+    loadChildren: '../modules/nania/nania.module#NaniaModule',
+  },
+  {
+    path: 'cleaner/',
+    redirectTo: 'cleaner',
+  },
+  {
+    path: 'cleaner',
+    loadChildren: '../modules/cleaner/cleaner.module#CleanerModule',
+  },
+  {
     path: '**',
     redirectTo: '',
   },
 ]
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {

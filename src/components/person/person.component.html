@@ -1,0 +1,29 @@
+<div class="person" *ngIf="data">
+  <div class="banner">
+    <div class="banner_button">{{data.buttonText}}</div>
+    <img class="banner_image" src="{{data.imgSrc}}" alt="banner">
+    <div class="banner_cover"></div>
+    <h1 class="banner_title">{{data.title}}</h1>
+  </div>
+  <div class="person_about">
+    <mat-card *ngFor="let card of data.cards" class="person_about_card">
+      <mat-card-header class="person_about_card_header">
+        <mat-card-title class="person_about_card_title">{{card.title}}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image [src]="card.img" alt="" class="person_about_card_img">
+      <mat-card-content class="person_about_card_content">
+        <p>
+          {{card.description}}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="person_types" *ngIf="data.about">
+    <h2 class="person_types_title">{{data.about.title}}</h2>
+      <ul class="person_types_list">
+        <li class="person_types_list_item" *ngFor="let tag of data.about.tags">{{tag}}</li>
+      </ul>
+  </div>
+</div>
+
+<!--<app-footer></app-footer>-->
