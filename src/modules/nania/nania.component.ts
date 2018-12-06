@@ -46,4 +46,9 @@ export class NaniaComponent {
       ]
     }
   };
+  selectOptions = [
+    'Няня грудничек',
+    'Няня дошкольнику',
+    'Няня гувернантка'
+  ];
 }

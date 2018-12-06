@@ -1,6 +1,6 @@
 <div class="person" *ngIf="data">
   <div class="banner">
-    <div class="banner_button">{{data.buttonText}}</div>
+    <div class="banner_button" (click)="doScroll()">{{data.buttonText}}</div>
     <img class="banner_image" src="{{data.imgSrc}}" alt="banner">
     <div class="banner_cover"></div>
     <h1 class="banner_title">{{data.title}}</h1>
@@ -25,5 +25,5 @@
       </ul>
   </div>
 </div>
-
-<!--<app-footer></app-footer>-->
+<app-request [selectOptions]="selectOptions"></app-request>
+<app-footer></app-footer>

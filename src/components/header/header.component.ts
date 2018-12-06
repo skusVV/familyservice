@@ -32,7 +32,13 @@ export class HeaderComponent implements OnInit {
   }
 
   onClick(route, scrollTo) {
-    if (this.router.url  === '/vacancies' && route === '/') {
+    if (scrollTo === 'request' && (this.router.url === '/cleaner' || this.router.url === '/nania')) {
+      this.doScroll('request');
+
+      return;
+    }
+
+    if ( route === '/') {
       this.scrollTo = scrollTo;
     }
 

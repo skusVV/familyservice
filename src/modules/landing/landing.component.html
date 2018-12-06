@@ -11,7 +11,7 @@
   <app-section *ngFor="let item of sections" [section]="item"></app-section>
   <app-doubleSection [section]="workWithAgency"></app-doubleSection>
   <app-prices></app-prices>
-  <app-request></app-request>
+  <app-request [selectOptions]="selectOptions"></app-request>
 </div>
 
 <app-contacts [section]="contacts"></app-contacts>

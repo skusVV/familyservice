@@ -1,9 +1,9 @@
-import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit, Input } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { filter, takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs/Subject';
 import { HttpClient } from '@angular/common/http';
-import { allPersonal, phoneMask } from '../../constants';
+import {phoneMask } from '../../constants';
 
 const EMPTY_STRING = ' ';
 
@@ -14,9 +14,10 @@ const EMPTY_STRING = ' ';
   encapsulation: ViewEncapsulation.None,
 })
 export class RequestComponent implements OnInit {
+  @Input() selectOptions: any;
 
   mask = phoneMask;
-  selectOptions = allPersonal;
+  // selectOptions = allPersonal;
   showSecondPart = false;
   showAfterSendMessage = false;
 

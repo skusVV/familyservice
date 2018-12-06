@@ -3,6 +3,7 @@
 
 .person{
   background: @color_second_grey;
+  color: @color_grey;
 
   .banner {
     width: 100%;
@@ -91,15 +92,35 @@
     margin-top: 75px;
 
     &_title {
+      display: block;
+      width: 80%;
+      margin: 0 auto;
       text-align: center;
+      border-bottom: 1px solid @color_red;
+      padding-bottom: 10px;
+      cursor: pointer;
+
+      &:hover {
+        color: @color_red;
+      }
     }
 
     &_list {
-      margin-top: 20px;
-      padding: 10px;
+      padding: 50px;
+      margin: 0 auto;
+
+
       &_item {
         font-size: 16px;
         font-weight: normal;
+        list-style-type: none;
+        margin-top: 10px;
+
+        &:before {
+          content:' \2713';
+          color: @color_red;
+          margin-right: 10px;
+        }
       }
     }
   }

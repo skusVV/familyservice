@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SmoothScroll } from '../../directives/scroll.directive';
+import {allPersonal} from '../../constants';
 
 const COLOR_SECOND_GREY = '#F3F3F3';
 const COLOR_FIRST = '#fff';
@@ -249,6 +250,8 @@ export class LandingComponent {
       ]
     }
   };
+
+  selectOptions = allPersonal;
 
   doScroll() {
     new SmoothScroll(document.getElementById('request'), {
