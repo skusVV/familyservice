@@ -3,6 +3,7 @@ import {allPersonal, phoneMask} from '../../constants';
 import {FormControl, FormGroup} from '@angular/forms';
 import {HttpClient} from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-admin',
@@ -15,7 +16,9 @@ export class AdminComponent implements OnInit {
   auth: any;
   vacancies: any;
 
-  constructor(private route: ActivatedRoute, private http: HttpClient) {}
+  constructor(private route: ActivatedRoute,
+              private http: HttpClient,
+              private titleService: Title ) {}
 
   ngOnInit() {
     this.data = this.route.snapshot.data.data;
@@ -27,6 +30,7 @@ export class AdminComponent implements OnInit {
     this.http.get('/api/vacancies').subscribe((res: any) => {
       this.vacancies = res.data;
     });
+    this.titleService.setTitle( 'Admin' );
   }
 
   remove(id: string) {

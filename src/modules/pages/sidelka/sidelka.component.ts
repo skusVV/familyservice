@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {SmoothScroll} from '../../../directives/scroll.directive';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-sidelka',
@@ -58,8 +59,10 @@ export class SidelkaComponent implements OnInit {
     'Сиделка с проживанием'
   ];
 
+  constructor(private titleService: Title ) { }
+
   ngOnInit() {
-    this.doScroll('body');
+    this.titleService.setTitle( 'sidelka' );
   }
 
   private doScroll(scrollTo: string) {

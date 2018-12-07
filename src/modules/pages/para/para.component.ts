@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {SmoothScroll} from '../../../directives/scroll.directive';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-para',
@@ -62,8 +63,10 @@ export class ParaComponent implements OnInit {
     // 'Няня дошкольнику',
     // 'Няня гувернантка'
   ];
+  constructor(private titleService: Title ) { }
 
   ngOnInit() {
+    this.titleService.setTitle( 'Para' );
     this.doScroll('body');
   }
 

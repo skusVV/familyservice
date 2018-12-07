@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SmoothScroll } from '../../directives/scroll.directive';
 import {allPersonal} from '../../constants';
+import { Title, Meta } from '@angular/platform-browser';
 
 const COLOR_SECOND_GREY = '#F3F3F3';
 
@@ -9,7 +10,7 @@ const COLOR_SECOND_GREY = '#F3F3F3';
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.less']
 })
-export class LandingComponent {
+export class LandingComponent implements OnInit {
 //   sections: any[] = [
 //     {
 //       title: 'Подбор Персонала',
@@ -251,6 +252,12 @@ export class LandingComponent {
   };
 
   selectOptions = allPersonal;
+
+  constructor(private titleService: Title ) { }
+
+  ngOnInit() {
+    this.titleService.setTitle( 'loololo' );
+  }
 
   doScroll() {
     new SmoothScroll(document.getElementById('request'), {

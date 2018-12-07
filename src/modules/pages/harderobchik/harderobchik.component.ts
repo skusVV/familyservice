@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {SmoothScroll} from '../../../directives/scroll.directive';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-harderobchik',
@@ -63,7 +64,10 @@ export class HarderobchikComponent implements OnInit {
     // 'Няня гувернантка'
   ];
 
+  constructor(private titleService: Title ) { }
+
   ngOnInit() {
+    this.titleService.setTitle( 'Harderob' );
     this.doScroll('body');
   }
 

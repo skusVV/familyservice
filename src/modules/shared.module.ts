@@ -14,6 +14,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {SmoothScrollToDirective} from '../directives/scroll.directive';
 import {PersonComponent} from '../components/person/person.component';
 import {MatCardModule} from '@angular/material/card';
+import { Title }     from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import {MatCardModule} from '@angular/material/card';
     HttpClientModule,
     MatCardModule
   ],
+  providers: [Title],
   exports: [
     VacanciesListComponent,
     VacancyBlockComponent,

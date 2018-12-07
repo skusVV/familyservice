@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {SmoothScroll} from '../../../directives/scroll.directive';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-cleaner',
@@ -51,7 +52,10 @@ export class CleanerComponent implements OnInit {
     'с проживанием'
   ];
 
+  constructor(private titleService: Title ) { }
+
   ngOnInit() {
+    this.titleService.setTitle( 'cleaner' );
     this.doScroll('body');
   }
 
