@@ -5,10 +5,13 @@
     <div class="banner_cover"></div>
     <h1 class="banner_title">{{data.title}}</h1>
   </div>
+  <div class="person_description" *ngIf="data.description">
+    <h1 class="person_description_item">{{data.description}}</h1>
+  </div>
   <div class="person_about">
     <mat-card *ngFor="let card of data.cards" class="person_about_card">
       <mat-card-header class="person_about_card_header">
-        <mat-card-title class="person_about_card_title">{{card.title}}</mat-card-title>
+        <mat-card-title class="person_about_card_title" *ngIf="card.title">{{card.title}}</mat-card-title>
       </mat-card-header>
       <img mat-card-image [src]="card.img" alt="" class="person_about_card_img">
       <mat-card-content class="person_about_card_content">
@@ -26,3 +29,4 @@
   </div>
 </div>
 <app-request [selectOptions]="selectOptions"></app-request>
+<app-footer></app-footer>

@@ -1,15 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {SmoothScroll} from '../../../directives/scroll.directive';
 
 @Component({
   selector: 'app-nania',
   templateUrl: './nania.component.html',
   styleUrls: ['./nania.component.less']
 })
-export class NaniaComponent {
+export class NaniaComponent implements OnInit {
   data = {
     imgSrc: 'assets/img/nania_banner2.jpeg',
     title: 'Предлагаем помощь няни для ухода за вашим малышом',
     buttonText: 'Заказать няню',
+    description: `Надежным помощником для вашего малыша станет няня воспитатель. Это
+квалифицированный специалист со среднеспециальным или высшим
+педагогическим образованием, который возьмет на себя ответственность за
+интеллектуальное и эстетическое развитие вашего ребенка.
+Заказывая у нас услуги няни, вы можете быть полностью спокойны за своего
+ребенка. Все предлагаемые кандидатуры прошли тщательную проверку, имеют
+специальное образование, опыт работы и положительные рекомендации! Доверьте
+подбор профессионалам.`,
     cards: [
       {
         title: 'Няня грудничку',
@@ -51,4 +60,21 @@ export class NaniaComponent {
     'Няня дошкольнику',
     'Няня гувернантка'
   ];
+
+  ngOnInit() {
+    this.doScroll('body');
+  }
+
+  private doScroll(scrollTo: string) {
+    setTimeout(() => {
+      new SmoothScroll(document.getElementById(scrollTo), {
+        duration: 800,
+        offset: null,
+        easing: null,
+        callbackBefore: () => {},
+        callbackAfter: () => {},
+        containerId: null
+      });
+    }, 200);
+  }
 }

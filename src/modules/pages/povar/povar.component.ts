@@ -1,15 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {SmoothScroll} from '../../../directives/scroll.directive';
 
 @Component({
   selector: 'app-povar',
   templateUrl: './povar.component.html',
   styleUrls: ['./povar.component.less']
 })
-export class PovarComponent {
+export class PovarComponent implements OnInit {
   data = {
     imgSrc: 'assets/img/povar_banner.jpeg',
     title: 'Предлагаем помощь няни для ухода за вашим малышом',
     buttonText: 'Заказать Повара',
+    description: `Наши повара обладают фантазией, даром импровизации, чувством прекрасного, тонким вкусом
+(в том числе и эстетическим). К тому же, у нас повара имеют безупречный глазомер, для точного
+смешивания ингредиентов и добавления в нужных пропорциях. Более того, наши кандидаты
+хорошо разбираються в диетологии, знают всё о калорийности тех или иных продуктов и их
+насыщенности витаминами и другими полезными микроэлементами. Наш кулинар не только
+готовить качественные блюда, но и готовить их быстро.`,
     cards: [
 //       {
 //         title: 'Няня грудничку',
@@ -35,7 +42,7 @@ export class PovarComponent {
 //           действительно подготовленным. Поэтому хорошая гувернантка совмещает функции обычной няни, педагога и детского психолога.`
 //       }
     ],
-    about: {
+    // about: {
       // title: 'Наши клиенты могут выбрать наиболее удобный для себя график работы няни',
       // tags: [
       //   'Няня на час',
@@ -44,11 +51,28 @@ export class PovarComponent {
       //   'На 5 дней в неделю',
       //   'Няня выходного дня'
       // ]
-    }
+    // }
   };
   selectOptions = [
     // 'Няня грудничек',
     // 'Няня дошкольнику',
     // 'Няня гувернантка'
   ];
+
+  ngOnInit() {
+    this.doScroll('body');
+  }
+
+  private doScroll(scrollTo: string) {
+    setTimeout(() => {
+      new SmoothScroll(document.getElementById(scrollTo), {
+        duration: 800,
+        offset: null,
+        easing: null,
+        callbackBefore: () => {},
+        callbackAfter: () => {},
+        containerId: null
+      });
+    }, 200);
+  }
 }

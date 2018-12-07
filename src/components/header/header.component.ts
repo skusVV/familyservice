@@ -32,7 +32,10 @@ export class HeaderComponent implements OnInit {
   }
 
   onClick(route, scrollTo) {
-    if (scrollTo === 'request' && (this.router.url === '/cleaner' || this.router.url === '/nania')) {
+    if (scrollTo === 'request' && (this.router.url === '/cleaner' || this.router.url === '/nania' || this.router.url === '/ohrana'
+      || this.router.url === '/huvernantka' || this.router.url === '/sidelka' || this.router.url === '/povar'
+      || this.router.url === '/voditel' || this.router.url === '/sadovnik' || this.router.url === '/hardirobchik'
+      || this.router.url === '/para')) {
       this.doScroll('request');
 
       return;

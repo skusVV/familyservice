@@ -17,7 +17,6 @@ export class RequestComponent implements OnInit {
   @Input() selectOptions: any;
 
   mask = phoneMask;
-  // selectOptions = allPersonal;
   showSecondPart = false;
   showAfterSendMessage = false;
 

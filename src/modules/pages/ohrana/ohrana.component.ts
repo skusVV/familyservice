@@ -1,15 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {SmoothScroll} from '../../../directives/scroll.directive';
 
 @Component({
   selector: 'app-ohrana',
   templateUrl: './ohrana.component.html',
   styleUrls: ['./ohrana.component.less']
 })
-export class OhranaComponent {
+export class OhranaComponent implements OnInit {
   data = {
     imgSrc: 'assets/img/security_banner.jpeg',
     title: 'Предлагаем помощь няни для ухода за вашим малышом',
     buttonText: 'Заказать Охрану',
+    description: `Загородный дом должен иметь защиту, которую смогут предоставить наши охранники. В случае
+проникновения нежелательных гостей на участок или в дом,наши кандидаты смогут остановить
+процесс кражи, а в идеале — задержать воров на месте преступления. Наши кандидаты
+гарантиуют организацию четкого контрольно-пропускного режима гостей,
+обслуживающего персонала и автотранспорта.`,
     cards: [
 //       {
 //         title: 'Няня грудничку',
@@ -35,7 +41,7 @@ export class OhranaComponent {
 //           действительно подготовленным. Поэтому хорошая гувернантка совмещает функции обычной няни, педагога и детского психолога.`
 //       }
     ],
-    about: {
+    // about: {
       // title: 'Наши клиенты могут выбрать наиболее удобный для себя график работы няни',
       // tags: [
       //   'Няня на час',
@@ -44,11 +50,28 @@ export class OhranaComponent {
       //   'На 5 дней в неделю',
       //   'Няня выходного дня'
       // ]
-    }
+    // }
   };
   selectOptions = [
     // 'Няня грудничек',
     // 'Няня дошкольнику',
     // 'Няня гувернантка'
   ];
+
+  ngOnInit() {
+    this.doScroll('body');
+  }
+
+  private doScroll(scrollTo: string) {
+    setTimeout(() => {
+      new SmoothScroll(document.getElementById(scrollTo), {
+        duration: 800,
+        offset: null,
+        easing: null,
+        callbackBefore: () => {},
+        callbackAfter: () => {},
+        containerId: null
+      });
+    }, 200);
+  }
 }

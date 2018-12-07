@@ -1,15 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {SmoothScroll} from '../../../directives/scroll.directive';
 
 @Component({
   selector: 'app-cleaner',
   templateUrl: './cleaner.component.html',
   styleUrls: ['./cleaner.component.less']
 })
-export class CleanerComponent {
+export class CleanerComponent implements OnInit {
   data = {
     imgSrc: 'assets/img/domrab_banner2.jpeg',
     title: 'Предлагаем услуги домработниц по уходу за вашим домом.',
     buttonText: 'Заказать домработника',
+    description: `Надежным помощником для вашего малыша станет няня воспитатель. Это
+квалифицированный специалист со среднеспециальным или высшим
+педагогическим образованием, который возьмет на себя ответственность за
+интеллектуальное и эстетическое развитие вашего ребенка.
+Заказывая у нас услуги няни, вы можете быть полностью спокойны за своего
+ребенка. Все предлагаемые кандидатуры прошли тщательную проверку, имеют
+специальное образование, опыт работы и положительные рекомендации! Доверьте
+подбор профессионалам.`,
     cards: [
       {
         title: 'Домработница на разовые уборки',
@@ -39,4 +48,21 @@ export class CleanerComponent {
     'с полной занятостью',
     'с проживанием'
   ];
+
+  ngOnInit() {
+    this.doScroll('body');
+  }
+
+  private doScroll(scrollTo: string) {
+    setTimeout(() => {
+      new SmoothScroll(document.getElementById(scrollTo), {
+        duration: 800,
+        offset: null,
+        easing: null,
+        callbackBefore: () => {},
+        callbackAfter: () => {},
+        containerId: null
+      });
+    }, 200);
+  }
 }

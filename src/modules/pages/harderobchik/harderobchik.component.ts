@@ -1,15 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {SmoothScroll} from '../../../directives/scroll.directive';
 
 @Component({
   selector: 'app-harderobchik',
   templateUrl: './harderobchik.component.html',
   styleUrls: ['./harderobchik.component.less']
 })
-export class HarderobchikComponent {
+export class HarderobchikComponent implements OnInit {
   data = {
     imgSrc: 'assets/img/hardirobchik_banner.jpeg',
     title: 'Предлагаем помощь няни для ухода за вашим малышом',
     buttonText: 'Заказать Градеробщицу',
+    description: `Наш специалист по гардеробу осуществляет уход за гардеробной комнатой и ведет
+домашнее хозяйство, связанное с гардеробом. Ткани, из которых сшит VIP-
+гардероб, имеют высокую стоимость и могут быть очень хрупкими. Специалист
+по VIP-гардеробу знает все тонкости, связанные с ними, и может подобрать
+надлежащий комплекс ухода, организовать его или осуществить самостоятельно. 
+
+Наши кандидаты наделены опрятностю, усидчивостю, повышенное внимание к
+деталям, ответственностю и осторожностю при обращении с одеждой и обувью.`,
     cards: [
 //       {
 //         title: 'Няня грудничку',
@@ -35,7 +44,7 @@ export class HarderobchikComponent {
 //           действительно подготовленным. Поэтому хорошая гувернантка совмещает функции обычной няни, педагога и детского психолога.`
 //       }
     ],
-    about: {
+    // about: {
       // title: 'Наши клиенты могут выбрать наиболее удобный для себя график работы няни',
       // tags: [
       //   'Няня на час',
@@ -44,11 +53,28 @@ export class HarderobchikComponent {
       //   'На 5 дней в неделю',
       //   'Няня выходного дня'
       // ]
-    }
+    // }
   };
   selectOptions = [
     // 'Няня грудничек',
     // 'Няня дошкольнику',
     // 'Няня гувернантка'
   ];
+
+  ngOnInit() {
+    this.doScroll('body');
+  }
+
+  private doScroll(scrollTo: string) {
+    setTimeout(() => {
+      new SmoothScroll(document.getElementById(scrollTo), {
+        duration: 800,
+        offset: null,
+        easing: null,
+        callbackBefore: () => {},
+        callbackAfter: () => {},
+        containerId: null
+      });
+    }, 200);
+  }
 }

@@ -1,15 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {SmoothScroll} from '../../../directives/scroll.directive';
 
 @Component({
   selector: 'app-huvernantka',
   templateUrl: './huvernantka.component.html',
   styleUrls: ['./huvernantka.component.less']
 })
-export class HuvernantkaComponent {
+export class HuvernantkaComponent implements OnInit {
   data = {
     imgSrc: 'assets/img/huvernantka_banner.jpeg',
     title: 'Предлагаем помощь няни для ухода за вашим малышом',
     buttonText: 'Заказать Гувернантку',
+    description: `Гувернантка сопровождает ребенка в кружки, секции, помогает делать школьные
+домашние задания и проверяет их. Домашняя учительница также организует досуг
+детей, знакомит с этикетом, обучает поведению в обществе. Наши педагоги владеют
+методиками преподавания иностранного языка, имеют музыкальное и/или
+художественное образование. Знания педагогики дошкольного воспитания
+обеспечивают развитие ребенка в соответствии с его возрастом и способностями.
+Подготовка к школе обязательно входит в перечень задач работника.`,
     cards: [
 //       {
 //         title: 'Няня грудничку',
@@ -51,4 +59,21 @@ export class HuvernantkaComponent {
     // 'Няня дошкольнику',
     // 'Няня гувернантка'
   ];
+
+  ngOnInit() {
+    this.doScroll('body');
+  }
+
+  private doScroll(scrollTo: string) {
+    setTimeout(() => {
+      new SmoothScroll(document.getElementById(scrollTo), {
+        duration: 800,
+        offset: null,
+        easing: null,
+        callbackBefore: () => {},
+        callbackAfter: () => {},
+        containerId: null
+      });
+    }, 200);
+  }
 }

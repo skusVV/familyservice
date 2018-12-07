@@ -1,32 +1,37 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {SmoothScroll} from '../../../directives/scroll.directive';
 
 @Component({
   selector: 'app-sidelka',
   templateUrl: './sidelka.component.html',
   styleUrls: ['./sidelka.component.less']
 })
-export class SidelkaComponent {
+export class SidelkaComponent implements OnInit {
   data = {
     imgSrc: 'assets/img/sidelka_banner.jpeg',
     title: 'Предлагаем помощь няни для ухода за вашим малышом',
     buttonText: 'Заказать Сиделку',
+    description: `Сиделка будет приходить либо постоянно проживать дома с больным и следить за
+его самочувствием. При необходимости оказывает первичную помощь,  делать
+нужные медицинские процедуры по указаниям врача.Пожилой или больной
+мужчина или женщина находится под опекой 24 часа в сутки.`,
     cards: [
       {
         title: 'Сиделка в больницу',
-        img: 'assets/img/n1.jpg',
+        img: 'assets/img/s1.jpg',
         description: `Наши сотрудники имеют опыт работы с тяжело больными подопечными, в том числе с пациентами, частично потерявшими 
         коммуникативные навыки. Вы можете нанять нашего сотрудника для постоянного, посменного или почасового пребывания в больнице.`
       },
       {
         title: 'Сиделка приходящая',
-        img: 'assets/img/n2.jpg',
+        img: 'assets/img/s2.jpg',
         description: `В нашем агентстве можно найти и нанять приходящую сиделку для пожилого человека или лежачего больного в Киеве или 
         Киевской обл. 
 Некоторые родные не могут бросить хорошую работу, чтобы полностью находится дома, в этом случае довертесь нашему агентству. `
       },
       {
         title: 'Сиделка с проживанием',
-        img: 'assets/img/n3.jpg',
+        img: 'assets/img/s3.jpg',
         description: `Уход за тяжело больным или пожилым человеком требует постоянного присутствия рядом с ним, чуткого внимания,
          квалифицированной медицинской подготовки и запас терпения. Обращаясь к нам, ваши близкие круглосуточно будут в надежных руках. `
       }
@@ -50,4 +55,21 @@ export class SidelkaComponent {
     'Сиделка приходящая',
     'Сиделка с проживанием'
   ];
+
+  ngOnInit() {
+    this.doScroll('body');
+  }
+
+  private doScroll(scrollTo: string) {
+    setTimeout(() => {
+      new SmoothScroll(document.getElementById(scrollTo), {
+        duration: 800,
+        offset: null,
+        easing: null,
+        callbackBefore: () => {},
+        callbackAfter: () => {},
+        containerId: null
+      });
+    }, 200);
+  }
 }

@@ -1,15 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {SmoothScroll} from '../../../directives/scroll.directive';
 
 @Component({
   selector: 'app-sadovnik',
   templateUrl: './sadovnik.component.html',
   styleUrls: ['./sadovnik.component.less']
 })
-export class SadovnikComponent {
+export class SadovnikComponent implements OnInit {
   data = {
     imgSrc: 'assets/img/sadovnik_banner.jpeg',
     title: 'Предлагаем помощь няни для ухода за вашим малышом',
     buttonText: 'Заказать Садовника',
+    description: `Наш садовник Вам сделает ухоженный сад и дачный участок. Сможет предоставить качественный
+уход за экзотическими растениями, маленьким водопадом или каменными дорожками. Мы
+сможем вам предоставить садовника - профессионала, который воплотит все ваши мечты в
+реальность, сотворит истинное произведение искусства в вашем саду и приусадебном участке,
+которое будет круглый год доставлять вам и вашим гостям удовольствие.`,
     cards: [
 //       {
 //         title: 'Няня грудничку',
@@ -35,7 +41,7 @@ export class SadovnikComponent {
 //           действительно подготовленным. Поэтому хорошая гувернантка совмещает функции обычной няни, педагога и детского психолога.`
 //       }
     ],
-    about: {
+    // about: {
       // title: 'Наши клиенты могут выбрать наиболее удобный для себя график работы няни',
       // tags: [
       //   'Няня на час',
@@ -44,11 +50,28 @@ export class SadovnikComponent {
       //   'На 5 дней в неделю',
       //   'Няня выходного дня'
       // ]
-    }
+    // }
   };
   selectOptions = [
     // 'Няня грудничек',
     // 'Няня дошкольнику',
     // 'Няня гувернантка'
   ];
+
+  ngOnInit() {
+    this.doScroll('body');
+  }
+
+  private doScroll(scrollTo: string) {
+    setTimeout(() => {
+      new SmoothScroll(document.getElementById(scrollTo), {
+        duration: 800,
+        offset: null,
+        easing: null,
+        callbackBefore: () => {},
+        callbackAfter: () => {},
+        containerId: null
+      });
+    }, 200);
+  }
 }

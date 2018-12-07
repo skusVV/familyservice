@@ -1,15 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {SmoothScroll} from '../../../directives/scroll.directive';
 
 @Component({
   selector: 'app-para',
   templateUrl: './para.component.html',
   styleUrls: ['./para.component.less']
 })
-export class ParaComponent {
+export class ParaComponent implements OnInit {
   data = {
     imgSrc: 'assets/img/simeyna_para_banner.jpeg',
     title: 'Предлагаем помощь няни для ухода за вашим малышом',
-    buttonText: 'Заказать няню',
+    buttonText: 'Заказать Семейную пару',
+    description: `В процессе поиска семейной пары мы видим своей задачей найти семью, члены которой в равной
+степени являются высококвалифицированными специалистами, по всем возложенным на них
+функциональным обязанностям. Мужчина выполняет обязанности садовника, сантехника, электрика,
+слесаря, охранника, хозяйственного водителя. Женщина работает в доме: уборка, уход за
+гардеробом, приготовление пищи и др. Важным моментом является, то, что пара проживает на
+территории работодателя и дом находится под постоянным присмотром.
+Семейная пара - команда работников в составе двух человек, которые всегда придут друг другу на
+помощь.`,
     cards: [
 //       {
 //         title: 'Няня грудничку',
@@ -35,7 +44,7 @@ export class ParaComponent {
 //           действительно подготовленным. Поэтому хорошая гувернантка совмещает функции обычной няни, педагога и детского психолога.`
 //       }
     ],
-    about: {
+    // about: {
       // title: 'Наши клиенты могут выбрать наиболее удобный для себя график работы няни',
       // tags: [
       //   'Няня на час',
@@ -44,11 +53,28 @@ export class ParaComponent {
       //   'На 5 дней в неделю',
       //   'Няня выходного дня'
       // ]
-    }
+    // }
   };
   selectOptions = [
     // 'Няня грудничек',
     // 'Няня дошкольнику',
     // 'Няня гувернантка'
   ];
+
+  ngOnInit() {
+    this.doScroll('body');
+  }
+
+  private doScroll(scrollTo: string) {
+    setTimeout(() => {
+      new SmoothScroll(document.getElementById(scrollTo), {
+        duration: 800,
+        offset: null,
+        easing: null,
+        callbackBefore: () => {},
+        callbackAfter: () => {},
+        containerId: null
+      });
+    }, 200);
+  }
 }

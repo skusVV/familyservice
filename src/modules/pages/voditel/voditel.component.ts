@@ -1,15 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {SmoothScroll} from '../../../directives/scroll.directive';
 
 @Component({
   selector: 'app-voditel',
   templateUrl: './voditel.component.html',
   styleUrls: ['./voditel.component.less']
 })
-export class VoditelComponent {
+export class VoditelComponent implements OnInit {
   data = {
     imgSrc: 'assets/img/voditel_banner.jpeg',
     title: 'Предлагаем помощь няни для ухода за вашим малышом',
-    buttonText: 'Заказать няню',
+    buttonText: 'Заказать Водителя',
+    description: `Наши водителя — это сервис высшего качества. Отлично знают город, терпеливые и
+тактичные. А уж профессиональные навыки, безаварийная езда и тотальное соблюдение
+ПДД – это даже не обсуждается. Помимо перевозки, наши водителя помогают клиенту в
+решении его вопросов: исполнить важные поручения, отвезти документы, забрать детей
+из школы, помочь донести покупки до квартиры и главное — дать почувствовать клиенту
+максимальный комфорт. Нашим кандидатам вы сможите доверить не только дорогостоящий
+автомобиль, но и жизнь и членов его семьи.`,
     cards: [
 //       {
 //         title: 'Няня грудничку',
@@ -35,7 +43,7 @@ export class VoditelComponent {
 //           действительно подготовленным. Поэтому хорошая гувернантка совмещает функции обычной няни, педагога и детского психолога.`
 //       }
     ],
-    about: {
+    // about: {
       // title: 'Наши клиенты могут выбрать наиболее удобный для себя график работы няни',
       // tags: [
       //   'Няня на час',
@@ -44,11 +52,28 @@ export class VoditelComponent {
       //   'На 5 дней в неделю',
       //   'Няня выходного дня'
       // ]
-    }
+    // }
   };
   selectOptions = [
     // 'Няня грудничек',
     // 'Няня дошкольнику',
     // 'Няня гувернантка'
   ];
+
+  ngOnInit() {
+    this.doScroll('body');
+  }
+
+  private doScroll(scrollTo: string) {
+    setTimeout(() => {
+      new SmoothScroll(document.getElementById(scrollTo), {
+        duration: 800,
+        offset: null,
+        easing: null,
+        callbackBefore: () => {},
+        callbackAfter: () => {},
+        containerId: null
+      });
+    }, 200);
+  }
 }
