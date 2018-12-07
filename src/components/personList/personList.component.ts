@@ -36,7 +36,7 @@ export class PersonListComponent {
     {
       title: 'Услуги Водителя',
       route: '/voditel',
-      img: 'assets/img/voditel.jpeg'
+      img: 'assets/img/voditel_3.jpg'
     },
     {
       title: 'Услуги Садовника-Хозяйственника',

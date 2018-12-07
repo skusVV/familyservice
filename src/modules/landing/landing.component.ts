@@ -3,7 +3,6 @@ import { SmoothScroll } from '../../directives/scroll.directive';
 import {allPersonal} from '../../constants';
 
 const COLOR_SECOND_GREY = '#F3F3F3';
-const COLOR_FIRST = '#fff';
 
 @Component({
   selector: 'app-landing',
@@ -218,7 +217,7 @@ export class LandingComponent {
     title: 'Контакты',
     scrollToId: 'contacts',
     firstItem: {
-      title: 'Телефон для соискателей',
+      title: 'Телефоны для соискателей',
       description: 'Консультации по трудоустройству:',
       phones: [
         {
