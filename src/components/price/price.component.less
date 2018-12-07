@@ -30,9 +30,8 @@
     position: relative;
     top: 40%;
     z-index: 5;
-    padding: 10px 100px 25px 100px;
+    padding: 15px 150px 25px 150px;
     background: @color_white;
-
   }
 
   &_description {
@@ -94,15 +93,15 @@
 }
 
 .domorabot{
-  background-position: 85% 10%;
+  background-position: 5% 10%;
 }
 
 .sidelka{
-  background-position: 0;
+  background-position: 30%;
 }
 
 .povar{
-  background-position: 25% 10%;
+  background-position: 25% -5px;
 }
 
 .voditel{
@@ -111,14 +110,115 @@
 
 @media screen and (max-width: 710px) {
   .price {
-    width: 400px;
-    height: 400px;
+    width: 250px;
+    height: 250px;
+    &_title {
+      font-size: 17px;
+    }
   }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 565px) {
   .price {
-    width: 320px;
-    height: 320px;
+    width: 200px;
+    height: 200px;
+
+    &_description {
+      &_wrapper {
+        width: 90%;
+        height: 90%;
+      }
+
+      &_header {
+        font-size: 19px;
+      }
+
+      &_item {
+        font-size: 13px;
+      }
+    }
+
+    &_title {
+      font-size: 17px;
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .price {
+    width: 175px;
+    height: 175px;
+
+    &_description {
+
+      &_title {
+        font-size: 17px;
+        padding: 4px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .price {
+    width: 140px;
+    height: 140px;
+
+    &_description {
+      &_wrapper {
+        width: 90%;
+        height: 90%;
+      }
+
+      &_header {
+        font-size: 17px;
+      }
+
+      &_item {
+        font-size: 11px;
+      }
+
+      &_title {
+        font-size: 13px;
+        padding: 1px;
+        margin-top: 10%;
+      }
+    }
+
+    &_title {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 335px) {
+  .price {
+    width: 120px;
+    height: 120px;
+
+    &_description {
+      &_wrapper {
+        width: 90%;
+        height: 90%;
+      }
+
+      &_header {
+        font-size: 15px;
+      }
+
+      &_item {
+        font-size: 9px;
+      }
+
+      &_title {
+        font-size: 11px;
+        padding: 1px;
+        margin-top: 10%;
+      }
+    }
+
+    &_title {
+      font-size: 13px;
+    }
   }
 }

@@ -8,6 +8,7 @@
   width: 100%;
   z-index: 10;
   background: @color_white;
+  font-family: helvetica-w01-roman,helvetica-w02-roman,helvetica-lt-w10-roman,sans-serif;
 
   &_burger {
     display: none;
@@ -171,6 +172,8 @@ a:visited{
 
 @media screen and (max-width: 900px) {
   .header {
+    height: 80px;
+
     &_navigation {
       display: none;
     }
@@ -183,13 +186,20 @@ a:visited{
 
 @media screen and (max-width: 560px) {
   .header {
+    height: 75px;
+
+    &_burger {
+      margin-left: 10px;
+    }
+
     &_logo {
-      transform: translate(-110%);
+      transform: translate(-100%);
     }
 
     &_contact {
       &_button {
-        padding: 0 15px;
+        font-size: 12px;
+        padding: 0 10px;
         height: 40%;
       }
     }
