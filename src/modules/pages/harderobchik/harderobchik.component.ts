@@ -8,6 +8,8 @@ import {SmoothScroll} from '../../../directives/scroll.directive';
 })
 export class HarderobchikComponent implements OnInit {
   data = {
+    titleInverte: false,
+    buttonInverte: false,
     imgSrc: 'assets/img/hardirobchik_banner.jpeg',
     title: 'Предлагаем помощь няни для ухода за вашим малышом',
     buttonText: 'Заказать Градеробщицу',

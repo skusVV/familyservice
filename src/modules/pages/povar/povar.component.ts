@@ -8,6 +8,8 @@ import {SmoothScroll} from '../../../directives/scroll.directive';
 })
 export class PovarComponent implements OnInit {
   data = {
+    titleInverte: true,
+    buttonInverte: true,
     imgSrc: 'assets/img/povar_banner.jpeg',
     title: 'Предлагаем помощь няни для ухода за вашим малышом',
     buttonText: 'Заказать Повара',

@@ -1,9 +1,12 @@
 <div class="person" *ngIf="data">
   <div class="banner">
-    <div class="banner_button" (click)="doScroll()">{{data.buttonText}}</div>
+    <div class="banner_button"
+         [class.banner_button-inverte]="data.buttonInverte"
+         (click)="doScroll()">{{data.buttonText}}</div>
     <img class="banner_image" src="{{data.imgSrc}}" alt="banner">
     <div class="banner_cover"></div>
-    <h1 class="banner_title">{{data.title}}</h1>
+    <h1 class="banner_title banner_title-inverte"
+        [class.banner_title-inverte]="data.titleInverte">{{data.title}}</h1>
   </div>
   <div class="person_description" *ngIf="data.description">
     <h1 class="person_description_item">{{data.description}}</h1>

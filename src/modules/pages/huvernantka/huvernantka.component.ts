@@ -8,6 +8,8 @@ import {SmoothScroll} from '../../../directives/scroll.directive';
 })
 export class HuvernantkaComponent implements OnInit {
   data = {
+    titleInverte: true,
+    buttonInverte: true,
     imgSrc: 'assets/img/huvernantka_banner.jpeg',
     title: 'Предлагаем помощь няни для ухода за вашим малышом',
     buttonText: 'Заказать Гувернантку',

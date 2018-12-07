@@ -28,6 +28,11 @@
       transform: translate(-50%, -50%);
       color: @color_white;
       opacity: 0.8;
+
+      &-inverte {
+        color: @color_grey;
+        opacity: 1;
+      }
     }
 
     &_button {
@@ -50,6 +55,11 @@
       &:hover {
         background: @color_white;
         color: @color_grey;
+      }
+
+      &-inverte {
+        background: @color_grey;
+        border: 2px solid @color_grey;
       }
     }
   }

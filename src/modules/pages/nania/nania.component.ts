@@ -8,6 +8,8 @@ import {SmoothScroll} from '../../../directives/scroll.directive';
 })
 export class NaniaComponent implements OnInit {
   data = {
+    titleInverte: true,
+    buttonInverte: true,
     imgSrc: 'assets/img/nania2_banner.jpeg',
     title: 'Предлагаем помощь няни для ухода за вашим малышом',
     buttonText: 'Заказать няню',

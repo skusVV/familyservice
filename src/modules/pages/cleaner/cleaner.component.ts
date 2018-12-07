@@ -8,6 +8,8 @@ import {SmoothScroll} from '../../../directives/scroll.directive';
 })
 export class CleanerComponent implements OnInit {
   data = {
+    titleInverte: false,
+    buttonInverte: false,
     imgSrc: 'assets/img/domrab_banner2.jpeg',
     title: 'Предлагаем услуги домработниц по уходу за вашим домом.',
     buttonText: 'Заказать домработника',
