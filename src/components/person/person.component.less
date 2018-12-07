@@ -23,7 +23,7 @@
       display: block;
       width: 75%;
       position: absolute;
-      top: 50%;
+      top: 55%;
       left: 50%;
       transform: translate(-50%, -50%);
       color: @color_white;
@@ -56,7 +56,9 @@
 
   &_description {
     width: 80%;
-    margin: 25px auto 0 auto;
+    margin: 0 auto;
+    position: relative;
+    top: 25px;
 
     &_item {
       color: @color_grey;
@@ -143,6 +145,27 @@
   }
 }
 
+@media screen and (max-width: 1250px) {
+  .person{
+    .banner {
+
+      &_image {
+        width: 100%;
+      }
+
+      &_title {
+        top: 60%;
+        font-size: 28px;
+
+      }
+
+      &_button {
+        top: 80px;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .person {
     &_about {
@@ -152,6 +175,41 @@
     }
   }
 }
+
+@media screen and (max-width: 900px) {
+  .person{
+    .banner {
+
+      &_image {
+        width: 100%;
+      }
+
+      &_title {
+        top: 70%;
+        font-size: 24px;
+
+      }
+
+      &_button {
+        top: 80px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .person{
+    .banner {
+      display: none;
+    }
+
+    &_description {
+      position: relative;
+      top: 50px;
+    }
+  }
+}
+
 
 @media screen and (max-width: 700px) {
   .person {

@@ -8,7 +8,7 @@ import {SmoothScroll} from '../../../directives/scroll.directive';
 })
 export class NaniaComponent implements OnInit {
   data = {
-    imgSrc: 'assets/img/nania_banner2.jpeg',
+    imgSrc: 'assets/img/nania2_banner.jpeg',
     title: 'Предлагаем помощь няни для ухода за вашим малышом',
     buttonText: 'Заказать няню',
     description: `Надежным помощником для вашего малыша станет няня воспитатель. Это
