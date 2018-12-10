@@ -57,14 +57,6 @@ const routes: Routes = [
     loadChildren: '../modules/pages/ohrana/ohrana.module#OhranaModule',
   },
   {
-    path: 'huvernantka/',
-    redirectTo: 'huvernantka',
-  },
-  {
-    path: 'huvernantka',
-    loadChildren: '../modules/pages/huvernantka/huvernantka.module#HuvernantkaModule',
-  },
-  {
     path: 'sidelka/',
     redirectTo: 'sidelka',
   },

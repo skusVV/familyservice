@@ -14,11 +14,6 @@ export class PersonListComponent {
       img: 'assets/img/nyania.jpeg'
     },
     {
-      title: 'Услуги Гувернантки',
-      route: '/huvernantka',
-      img: 'assets/img/huvernantka.jpeg'
-    },
-    {
       title: 'Услуги Домработницы',
       route: '/cleaner',
       img: 'assets/img/domorabot.jpeg'
