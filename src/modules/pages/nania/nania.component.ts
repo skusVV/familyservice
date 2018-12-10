@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {SmoothScroll} from '../../../directives/scroll.directive';
 import {Title, Meta} from '@angular/platform-browser';
+import {scrollOptions} from '../../../constants';
 
 const META_DESCRIPTION = `Ищете няню в Киеве или пригороде? С проживанием или без? Няня грудничку или дошкольнику? Нам есть что Вам
  предложить! Проверенные няни от агентства домашего персонала Family Service. Быстрый подбор. Большой выбор кандидатур. Гарантия замены.
@@ -81,14 +82,7 @@ export class NaniaComponent implements OnInit {
 
   private doScroll(scrollTo: string) {
     setTimeout(() => {
-      new SmoothScroll(document.getElementById(scrollTo), {
-        duration: 800,
-        offset: null,
-        easing: null,
-        callbackBefore: () => {},
-        callbackAfter: () => {},
-        containerId: null
-      });
+      new SmoothScroll(document.getElementById(scrollTo), scrollOptions);
     }, 200);
   }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SmoothScroll } from '../../directives/scroll.directive';
-import {allPersonal} from '../../constants';
+import {allPersonal, scrollOptions} from '../../constants';
 import { Title, Meta } from '@angular/platform-browser';
 
 const COLOR_SECOND_GREY = '#F3F3F3';
@@ -266,13 +266,6 @@ export class LandingComponent implements OnInit {
   }
 
   doScroll() {
-    new SmoothScroll(document.getElementById('request'), {
-      duration: 800,
-      offset: null,
-      easing: null,
-      callbackBefore: () => {},
-      callbackAfter: () => {},
-      containerId: null
-    });
+    new SmoothScroll(document.getElementById('request'), scrollOptions);
   }
 }

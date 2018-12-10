@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {SmoothScroll} from '../../../directives/scroll.directive';
 import {Title} from '@angular/platform-browser';
+import {scrollOptions} from '../../../constants';
 
 @Component({
   selector: 'app-sadovnik',
@@ -70,14 +71,7 @@ export class SadovnikComponent implements OnInit {
 
   private doScroll(scrollTo: string) {
     setTimeout(() => {
-      new SmoothScroll(document.getElementById(scrollTo), {
-        duration: 800,
-        offset: null,
-        easing: null,
-        callbackBefore: () => {},
-        callbackAfter: () => {},
-        containerId: null
-      });
+      new SmoothScroll(document.getElementById(scrollTo), scrollOptions);
     }, 200);
   }
 }

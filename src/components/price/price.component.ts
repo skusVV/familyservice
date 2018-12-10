@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import {SmoothScroll} from '../../directives/scroll.directive';
+import {scrollOptions} from '../../constants';
 
 @Component({
   selector: 'app-price',
@@ -20,13 +21,6 @@ export class PriceComponent {
   }
 
   doScroll() {
-    new SmoothScroll(document.getElementById('request'), {
-      duration: 800,
-      offset: null,
-      easing: null,
-      callbackBefore: () => {},
-      callbackAfter: () => {},
-      containerId: null
-    });
+    new SmoothScroll(document.getElementById('request'), scrollOptions);
   }
 }

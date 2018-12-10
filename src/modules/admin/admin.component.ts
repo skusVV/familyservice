@@ -30,7 +30,7 @@ export class AdminComponent implements OnInit {
     this.http.get('/api/vacancies').subscribe((res: any) => {
       this.vacancies = res.data;
     });
-    this.titleService.setTitle( 'Admin' );
+    this.titleService.setTitle( 'Family Service - admin' );
   }
 
   remove(id: string) {
