@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {SmoothScroll} from '../../../directives/scroll.directive';
-import {Title} from '@angular/platform-browser';
+import {Title, Meta} from '@angular/platform-browser';
+
+const META_DESCRIPTION = `Ищете няню в Киеве или пригороде? С проживанием или без? Няня грудничку или дошкольнику? Нам есть что Вам
+ предложить! Проверенные няни от агентства домашего персонала Family Service. Быстрый подбор. Большой выбор кандидатур. Гарантия замены.
+  Оставьте заявку или позвоните сейчас!`;
+const META_TITLE = 'Услуги няни в Киеве - няня для ребенка (Киев) - почасово / с проживанием - Family Service';
 
 @Component({
   selector: 'app-nania',
@@ -64,10 +69,13 @@ export class NaniaComponent implements OnInit {
     'Няня гувернантка'
   ];
 
-  constructor(private titleService: Title ) { }
+  constructor(private titleService: Title, private meta: Meta ) { }
 
   ngOnInit() {
-    this.titleService.setTitle( 'nania' );
+    this.titleService.setTitle(META_TITLE);
+    this.meta.updateTag({property: 'og:title', content: META_TITLE});
+    this.meta.updateTag({name: 'description', content: META_DESCRIPTION});
+    this.meta.updateTag({property: 'og:description', content: META_DESCRIPTION});
     this.doScroll('body');
   }
 

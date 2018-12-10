@@ -4,6 +4,9 @@ import {allPersonal} from '../../constants';
 import { Title, Meta } from '@angular/platform-browser';
 
 const COLOR_SECOND_GREY = '#F3F3F3';
+const META_DESCRIPTION = `Агентство по подбору домашнего персонала в Киеве. Нужна няня? Домработница? Сиделка? Водитель? Нам есть что 
+Вам предложить. Звоните: 095 88 66 877`;
+const META_TITLE = 'Family Service - Агентство домашнего персонала';
 
 @Component({
   selector: 'app-landing',
@@ -253,10 +256,13 @@ export class LandingComponent implements OnInit {
 
   selectOptions = allPersonal;
 
-  constructor(private titleService: Title ) { }
+  constructor(private titleService: Title, private meta: Meta  ) { }
 
   ngOnInit() {
-    this.titleService.setTitle( 'loololo' );
+    this.titleService.setTitle(META_TITLE);
+    this.meta.updateTag({property: 'og:title', content: META_TITLE});
+    this.meta.updateTag({name: 'description', content: META_DESCRIPTION});
+    this.meta.updateTag({property: 'og:description', content: META_DESCRIPTION});
   }
 
   doScroll() {
