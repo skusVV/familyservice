@@ -64,6 +64,9 @@ export class ParaComponent implements OnInit {
     // 'Няня дошкольнику',
     // 'Няня гувернантка'
   ];
+
+  requestTitle = 'Заказать семейную пару прямо сейчас !';
+
   constructor(private titleService: Title ) { }
 
   ngOnInit() {

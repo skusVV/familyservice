@@ -15,6 +15,7 @@ const EMPTY_STRING = ' ';
 })
 export class RequestComponent implements OnInit {
   @Input() selectOptions: any;
+  @Input() title: string;
 
   mask = phoneMask;
   showSecondPart = false;

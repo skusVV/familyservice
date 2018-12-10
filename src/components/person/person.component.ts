@@ -10,6 +10,7 @@ import {scrollOptions} from '../../constants';
 export class PersonComponent {
   @Input() data: any;
   @Input() selectOptions: any;
+  @Input() title: string;
 
   doScroll() {
     new SmoothScroll(document.getElementById('request'), scrollOptions);

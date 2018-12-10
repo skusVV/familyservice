@@ -141,6 +141,14 @@
       padding: 0 25px;
       transition: all .3s;
 
+      &_desktop {
+        display: block;
+      }
+
+      &_mobile {
+        display: none;
+      }
+
       &:hover {
         background: @color_white;
         color: @color_red;
@@ -195,14 +203,23 @@ a:visited{
     }
 
     &_logo {
-      transform: translate(-100%);
+      transform: translate(-75%);
     }
 
     &_contact {
       &_button {
-        font-size: 12px;
+        font-size: 14px;
         padding: 0 10px;
-        height: 40%;
+        height: 50%;
+
+
+        &_desktop {
+          display: none;
+        }
+
+        &_mobile {
+          display: block;
+        }
       }
     }
   }

@@ -64,6 +64,8 @@ export class VoditelComponent implements OnInit {
     // 'Няня гувернантка'
   ];
 
+  requestTitle = 'Заказать водителя прямо сейчас !';
+
   constructor(private titleService: Title ) { }
 
   ngOnInit() {

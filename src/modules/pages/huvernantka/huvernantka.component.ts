@@ -63,6 +63,8 @@ export class HuvernantkaComponent implements OnInit {
     // 'Няня дошкольнику',
     // 'Няня гувернантка'
   ];
+  requestTitle = 'Заказать гувернантку прямо сейчас !';
+
 
   constructor(private titleService: Title ) { }
 

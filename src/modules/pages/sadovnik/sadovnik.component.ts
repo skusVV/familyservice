@@ -62,6 +62,8 @@ export class SadovnikComponent implements OnInit {
     // 'Няня гувернантка'
   ];
 
+  requestTitle = 'Заказать садовника прямо сейчас !';
+
   constructor(private titleService: Title ) { }
 
   ngOnInit() {

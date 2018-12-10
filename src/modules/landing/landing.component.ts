@@ -255,6 +255,7 @@ export class LandingComponent implements OnInit {
   };
 
   selectOptions = allPersonal;
+  requestTitle = 'Оставьте заявку на подбор персонала прямо сейчас !';
 
   constructor(private titleService: Title, private meta: Meta  ) { }
 

@@ -63,6 +63,8 @@ export class PovarComponent implements OnInit {
     // 'Няня гувернантка'
   ];
 
+  requestTitle = 'Заказать повара прямо сейчас !';
+
   constructor(private titleService: Title ) { }
 
   ngOnInit() {

@@ -14,7 +14,7 @@ export class CleanerComponent implements OnInit {
     buttonInverte: false,
     imgSrc: 'assets/img/domrab_banner2.jpeg',
     title: 'Предлагаем услуги домработниц по уходу за вашим домом.',
-    buttonText: 'Заказать домработника',
+    buttonText: 'Заказать домработницу',
     description: `Надежным помощником для вашего малыша станет няня воспитатель. Это
 квалифицированный специалист со среднеспециальным или высшим
 педагогическим образованием, который возьмет на себя ответственность за
@@ -52,6 +52,8 @@ export class CleanerComponent implements OnInit {
     'с полной занятостью',
     'с проживанием'
   ];
+
+  requestTitle = 'Заказать домработницу прямо сейчас !';
 
   constructor(private titleService: Title ) { }
 

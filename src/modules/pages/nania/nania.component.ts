@@ -70,6 +70,8 @@ export class NaniaComponent implements OnInit {
     'Няня гувернантка'
   ];
 
+  requestTitle = 'Заказать няню прямо сейчас !';
+
   constructor(private titleService: Title, private meta: Meta ) { }
 
   ngOnInit() {

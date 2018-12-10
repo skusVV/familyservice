@@ -60,6 +60,8 @@ export class SidelkaComponent implements OnInit {
     'Сиделка с проживанием'
   ];
 
+  requestTitle = 'Заказать сиделку прямо сейчас !';
+
   constructor(private titleService: Title ) { }
 
   ngOnInit() {

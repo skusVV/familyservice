@@ -62,6 +62,8 @@ export class OhranaComponent implements OnInit {
     // 'Няня гувернантка'
   ];
 
+  requestTitle = 'Заказать охрану прямо сейчас !';
+
   constructor(private titleService: Title ) { }
 
   ngOnInit() {

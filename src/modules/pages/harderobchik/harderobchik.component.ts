@@ -65,6 +65,8 @@ export class HarderobchikComponent implements OnInit {
     // 'Няня гувернантка'
   ];
 
+  requestTitle = 'Заказать гардеробщицу прямо сейчас !';
+
   constructor(private titleService: Title ) { }
 
   ngOnInit() {
