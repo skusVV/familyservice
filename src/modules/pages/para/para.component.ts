@@ -12,8 +12,8 @@ const META_TITLE = 'Услуги семейной пары в Киеве для 
 })
 export class ParaComponent implements OnInit {
   data = {
-    titleInverte: true,
-    buttonInverte: true,
+    titleInverte: false,
+    buttonInverte: false,
     imgSrc: 'assets/img/para_banner2.jpeg',
     title: 'Услуги семейной пары',
     buttonText: 'Заказать Семейную пару',

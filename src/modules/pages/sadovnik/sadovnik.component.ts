@@ -13,7 +13,7 @@ const META_TITLE = 'Садовники - услуги садовника в Ки
 export class SadovnikComponent implements OnInit {
   data = {
     titleInverte: false,
-    buttonInverte: true,
+    buttonInverte: false,
     imgSrc: 'assets/img/sadovnik_banner3.jpeg',
     title: 'Предлагаем услуги садовника-хозяйственника в Киеве и Киевской области',
     buttonText: 'Заказать Садовника',

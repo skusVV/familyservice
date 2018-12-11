@@ -14,7 +14,7 @@ export class CleanerComponent implements OnInit {
   data = {
     titleInverte: false,
     buttonInverte: false,
-    imgSrc: 'assets/img/domrab_banner4.jpeg',
+    imgSrc: 'assets/img/domrab_banner7.jpeg',
     title: 'Предлагаем услуги домработницы по уходу за вашим домом',
     buttonText: 'Заказать домработницу',
     description: `Горничная или домработница поддержит чистоту и порядок, приготовит пищу,

@@ -12,8 +12,8 @@ const META_TITLE = 'Сиделки (вахта) - услуги в Киеве - �
 })
 export class SidelkaComponent implements OnInit {
   data = {
-    titleInverte: true,
-    buttonInverte: true,
+    titleInverte: false,
+    buttonInverte: false,
     imgSrc: 'assets/img/sidelka_banner.jpeg',
     title: 'Предлагаем услуги сиделки в Киеве и Киевской области',
     buttonText: 'Заказать Сиделку',

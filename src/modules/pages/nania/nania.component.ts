@@ -15,8 +15,8 @@ const META_TITLE = 'Услуги няни в Киеве - няня для реб
 })
 export class NaniaComponent implements OnInit {
   data = {
-    titleInverte: true,
-    buttonInverte: true,
+    titleInverte: false,
+    buttonInverte: false,
     imgSrc: 'assets/img/nania2_banner.jpeg',
     title: 'Предлагаем услуги няни для ухода за вашим ребенком',
     buttonText: 'Заказать няню',

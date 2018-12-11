@@ -12,8 +12,8 @@ const META_TITLE = 'Водители - услуги личного водите�
 })
 export class VoditelComponent implements OnInit {
   data = {
-    titleInverte: true,
-    buttonInverte: true,
+    titleInverte: false,
+    buttonInverte: false,
     imgSrc: 'assets/img/voditel_banner.jpeg',
     title: 'В обязанности персонала будет входить выполнение различных поручений работодателя, а также охрана его и членов его семьи.',
     buttonText: 'Заказать Водителя',
