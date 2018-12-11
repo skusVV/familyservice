@@ -11,7 +11,7 @@ export class PersonListComponent {
     {
       title: 'Услуги Няни',
       route: '/nania',
-      img: 'assets/img/nyania.jpeg'
+      img: 'assets/img/nania_preview.jpg'
     },
     {
       title: 'Услуги Домработницы',
@@ -46,7 +46,7 @@ export class PersonListComponent {
     {
       title: 'Услуги Семейной пары',
       route: '/para',
-      img: 'assets/img/simeyna_para.jpeg'
+      img: 'assets/img/para3.jpg'
     },
     {
       title: 'Услуги Охраны',

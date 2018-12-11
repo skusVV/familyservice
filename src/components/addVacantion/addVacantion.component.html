@@ -34,3 +34,34 @@
 
   <button mat-raised-button color="accent" type="submit" (click)="submitForm()">Добавить вакансию</button>
 </div>
+
+<div class="vacancy">
+  ПРЕВЬЮ
+  <mat-accordion class="vacancy_accordion">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header class="vacancy_header-mat" collapsedHeight="75px">
+        <div class="vacancy_header">
+          <div class="vacancy_title">
+            {{vacancy.title}}
+          </div>
+          <div class="vacancy_subtitle">
+            <div class="vacancy_place">
+              <div class="field_name">Место работы: </div>
+              <div class="field_value">{{vacancy.location || 'Не указано'}};</div>
+            </div>
+            <div class="vacancy_price">
+              <div class="field_name">Зарплата: </div>
+              <div class="field_value">{{vacancy.salary || 'Не указано'}} грн.</div>
+            </div>
+          </div>
+        </div>
+      </mat-expansion-panel-header>
+      <div class="vacancy_blocks_wrapper">
+        <div class="vacancy_block" *ngFor="let block of vacancy.blocks">
+          <app-vacancy-block [block]="block"></app-vacancy-block>
+        </div>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+

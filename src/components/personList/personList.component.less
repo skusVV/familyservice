@@ -4,6 +4,19 @@
   background: @color_second_grey;
   color: @color_grey;
 
+  &_title {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid @color_red;
+    color: @color_grey;
+    cursor: pointer;
+    font-size: 24px;
+
+    &:hover {
+      color: @color_red;
+    }
+  }
+
   &_wrapper {
     display: flex;
     justify-content: space-evenly;
@@ -41,6 +54,11 @@
   &_card {
     width: 30%;
     margin: 20px;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
 
     &_title {
       font-family: helvetica-w01-roman,helvetica-w02-roman,helvetica-lt-w10-roman,sans-serif;
@@ -49,9 +67,9 @@
     }
 
     &_img{
+      transition: all .3s;
       &:hover {
         transform: scale(1.1);
-        transition: all .3s;
         filter: saturate(1.25);
       }
     }

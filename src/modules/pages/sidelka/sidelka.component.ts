@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {SmoothScroll} from '../../../directives/scroll.directive';
-import {Title} from '@angular/platform-browser';
+import {Meta, Title} from '@angular/platform-browser';
 import {scrollOptions} from '../../../constants';
+
+const META_TITLE = 'Сиделки (вахта) - услуги в Киеве - сиделка для больного / пожилого человека (Киев) - Family Service';
 
 @Component({
   selector: 'app-sidelka',
@@ -13,7 +15,7 @@ export class SidelkaComponent implements OnInit {
     titleInverte: true,
     buttonInverte: true,
     imgSrc: 'assets/img/sidelka_banner.jpeg',
-    title: 'Предлагаем помощь няни для ухода за вашим малышом',
+    title: 'Предлагаем услуги сиделки в Киеве и Киевской области',
     buttonText: 'Заказать Сиделку',
     description: `Сиделка будет приходить либо постоянно проживать дома с больным и следить за
 его самочувствием. При необходимости оказывает первичную помощь,  делать
@@ -22,37 +24,39 @@ export class SidelkaComponent implements OnInit {
     cards: [
       {
         title: 'Сиделка в больницу',
-        img: 'assets/img/s1.jpg',
+        img: 'assets/img/s3.jpg',
         description: `Наши сотрудники имеют опыт работы с тяжело больными подопечными, в том числе с пациентами, частично потерявшими 
         коммуникативные навыки. Вы можете нанять нашего сотрудника для постоянного, посменного или почасового пребывания в больнице.`
       },
       {
         title: 'Сиделка приходящая',
-        img: 'assets/img/s2.jpg',
+        img: 'assets/img/s1.jpg',
         description: `В нашем агентстве можно найти и нанять приходящую сиделку для пожилого человека или лежачего больного в Киеве или 
         Киевской обл. 
 Некоторые родные не могут бросить хорошую работу, чтобы полностью находится дома, в этом случае довертесь нашему агентству. `
       },
       {
         title: 'Сиделка с проживанием',
-        img: 'assets/img/s3.jpg',
+        img: 'assets/img/s2.jpg',
         description: `Уход за тяжело больным или пожилым человеком требует постоянного присутствия рядом с ним, чуткого внимания,
          квалифицированной медицинской подготовки и запас терпения. Обращаясь к нам, ваши близкие круглосуточно будут в надежных руках. `
       }
     ],
-    about: {
-      title: `Наши опытные специалисты помогут повысить безопасность и независимость пожилых людей и людей с ограниченными возможностями 
-      в домашних и стационарных условиях путём предоставления помощи в повседневной жизни`,
-      tags: [
-        'Приготовление пищи',
-        'Сопровождение',
-        'Личная гигиена',
-        'Помощь по дому',
-        'Прием медикаментов',
-        'Дружеские отношения',
-        'Вызов врача'
-      ]
-    }
+    about: [
+        {
+        title: `Наши опытные специалисты помогут повысить безопасность и независимость пожилых людей и людей с ограниченными возможностями 
+        в домашних и стационарных условиях путём предоставления помощи в повседневной жизни`,
+        tags: [
+          'Приготовление пищи',
+          'Сопровождение',
+          'Личная гигиена',
+          'Помощь по дому',
+          'Прием медикаментов',
+          'Дружеские отношения',
+          'Вызов врача'
+        ]
+      }
+    ]
   };
   selectOptions = [
     'Сиделка в больницу',
@@ -62,10 +66,12 @@ export class SidelkaComponent implements OnInit {
 
   requestTitle = 'Заказать сиделку прямо сейчас !';
 
-  constructor(private titleService: Title ) { }
+  constructor(private titleService: Title, private meta: Meta) { }
 
   ngOnInit() {
-    this.titleService.setTitle( 'sidelka' );
+    this.titleService.setTitle(META_TITLE);
+    this.meta.updateTag({property: 'og:title', content: META_TITLE});
+    this.doScroll('body');
   }
 
   private doScroll(scrollTo: string) {

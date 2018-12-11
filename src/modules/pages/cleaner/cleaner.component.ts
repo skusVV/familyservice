@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {SmoothScroll} from '../../../directives/scroll.directive';
-import {Title} from '@angular/platform-browser';
+import {Meta, Title} from '@angular/platform-browser';
 import {scrollOptions} from '../../../constants';
+
+const META_TITLE = 'Домработницы - услуги домработницы в Киеве - домработница для дома (Киев) - Family Service';
 
 @Component({
   selector: 'app-cleaner',
@@ -12,8 +14,8 @@ export class CleanerComponent implements OnInit {
   data = {
     titleInverte: false,
     buttonInverte: false,
-    imgSrc: 'assets/img/domrab_banner2.jpeg',
-    title: 'Предлагаем услуги домработниц по уходу за вашим домом.',
+    imgSrc: 'assets/img/domrab_banner4.jpeg',
+    title: 'Предлагаем услуги домработницы по уходу за вашим домом',
     buttonText: 'Заказать домработницу',
     description: `Горничная или домработница поддержит чистоту и порядок, приготовит пищу,
 организует покупку продуктов и оплату счетов, осуществит сезонные работы в доме.
@@ -37,7 +39,7 @@ export class CleanerComponent implements OnInit {
       },
       {
         title: 'Домработница с проживанием',
-        img: 'assets/img/c3.jpg',
+        img: 'assets/img/d4.jpg',
         description: `Поиск домработниц с полной занятостью ведут люди, которым необходим постоянный присмотр за домом, но которые не хотят 
         при этом, чтобы помощница проживала вместе с ними. Домработница обычно приходит пять раз в неделю, занимается уборкой и готовкой,
          может выполнять некоторые другие заранее оговоренные функции.`
@@ -53,10 +55,11 @@ export class CleanerComponent implements OnInit {
 
   requestTitle = 'Заказать домработницу прямо сейчас !';
 
-  constructor(private titleService: Title ) { }
+  constructor(private titleService: Title, private meta: Meta ) { }
 
   ngOnInit() {
-    this.titleService.setTitle( 'cleaner' );
+    this.titleService.setTitle(META_TITLE);
+    this.meta.updateTag({property: 'og:title', content: META_TITLE});
     this.doScroll('body');
   }
 

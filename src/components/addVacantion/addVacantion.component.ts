@@ -18,6 +18,10 @@ export class AddVacantionComponent {
     return this.form.get('blocks') as FormArray;
   }
 
+  get vacancy() {
+    return this.form.getRawValue();
+  }
+
   submitForm() {
     const {title, location, salary, blocks} = this.form.getRawValue();
     const data = {

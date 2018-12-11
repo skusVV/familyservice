@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Title} from '@angular/platform-browser';
+import {Meta, Title} from '@angular/platform-browser';
+
+const META_TITLE = 'Вакансии - Family Service - вакансии (Киев)';
 
 @Component({
   selector: 'app-vacancies',
@@ -15,14 +17,16 @@ export class VacanciesComponent implements OnInit {
   scrollUpDistance = 2;
   sum = 10;
   constructor(private http: HttpClient,
-              private titleService: Title) {}
+              private titleService: Title,
+              private meta: Meta) {}
 
   ngOnInit() {
     this.http.get('/api/vacancies').subscribe((res: any) => {
-      this.hidenvacancies = res.data;
+      this.hidenvacancies = res.data.slice().reverse();
       this.vacancies = this.hidenvacancies.slice(0, this.sum);
     });
-    this.titleService.setTitle( 'Vacancy' );
+    this.titleService.setTitle(META_TITLE);
+    this.meta.updateTag({property: 'og:title', content: META_TITLE});
   }
 
   onScrollDown () {

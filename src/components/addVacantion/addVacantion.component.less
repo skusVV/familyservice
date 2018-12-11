@@ -32,3 +32,152 @@
 }
 
 
+.vacancy{
+  opacity: .85;
+
+  &_accordion{
+    margin: 5px;
+  }
+
+  &_header{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    &-mat {
+      padding: 10px;
+    }
+  }
+
+  &_title {
+    width: 100%;
+    font-size: 22px;
+    color: @color_red;
+  }
+
+  &_subtitle {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 16px;
+    color: @color_grey;
+    padding: 0 20px;
+  }
+
+  &_place {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+    color: @color_grey;
+  }
+
+  &_price {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    color: @color_grey;
+    font-size: 18px;
+  }
+
+  &_blocks_wrapper{
+    padding-bottom: 25px;
+    border-bottom: 2px solid @color_red;
+  }
+}
+.field_name{
+  margin: 5px;
+}
+
+.field_value{
+  margin: 5px;
+}
+
+.remove{
+  color: @color_red;
+}
+
+@media screen and (max-width: 750px) {
+  .vacancy {
+    &_title {
+      font-size: 20px;
+    }
+
+    &_subtitle {
+      font-size: 14px;
+    }
+    &_price {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .vacancy {
+    opacity: 1;
+
+    &_accordion{
+      margin: 0;
+    }
+
+    &_title {
+      font-size: 18px;
+    }
+
+    &_subtitle {
+      font-size: 12px;
+    }
+
+    &_price {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .vacancy {
+
+    &_title {
+      font-size: 14px;
+    }
+
+    &_subtitle {
+      font-size: 11px;
+    }
+
+    &_price {
+      font-size: 13px;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .vacancy {
+
+    &_title {
+      font-size: 12px;
+    }
+
+    &_subtitle {
+      font-size: 10px;
+    }
+
+    &_price {
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .vacancy {
+
+    &_title {
+      font-size: 11px;
+    }
+
+    &_subtitle {
+      font-size: 9px;
+    }
+  }
+}
+
+

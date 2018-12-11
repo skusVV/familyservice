@@ -1,13 +1,16 @@
 <div class="person-list">
+  <h1 class="person-list_title">Подбор персонала для Вашего дома</h1>
   <div class="person-list_wrapper">
-    <mat-card *ngFor="let card of cards" class="person-list_card">
+    <mat-card *ngFor="let card of cards" class="person-list_card"
+              [routerLink]="card.route"
+              routerLinkActive="active">
       <mat-card-header class="person-list_card_header">
         <mat-card-title class="person-list_card_title">{{card.title}}</mat-card-title>
       </mat-card-header>
       <div class="person-list_imgWrap">
         <img mat-card-image [src]="card.img" alt="" class="person-list_card_img">
       </div>
-        <div class="person-list_button" [routerLink]="card.route" routerLinkActive="active">
+        <div class="person-list_button" >
           <div>Подробнее</div>
         </div>
     </mat-card>
