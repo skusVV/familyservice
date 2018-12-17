@@ -11,6 +11,9 @@
   <div class="person_description" *ngIf="data.description">
     <h1 class="person_description_item" [innerHtml]="data.description"></h1>
   </div>
+  <div class="person_description person_description-mobile" *ngIf="data.descriptionMobile">
+    <h1 class="person_description_item" [innerHtml]="data.descriptionMobile"></h1>
+  </div>
   <div class="person_about">
     <mat-card *ngFor="let card of data.cards" class="person_about_card">
       <mat-card-header class="person_about_card_header">

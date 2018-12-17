@@ -73,6 +73,10 @@
     position: relative;
     top: 25px;
 
+    &-mobile{
+      display: none;
+    }
+
     &_item {
       color: @color_grey;
       font-size: 16px;
@@ -204,6 +208,14 @@
 
       &_button {
         top: 80px;
+      }
+    }
+
+    &_description{
+      display: none;
+
+      &-mobile {
+        display: block;
       }
     }
   }
