@@ -4,6 +4,7 @@ import { filter, takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs/Subject';
 import { HttpClient } from '@angular/common/http';
 import {phoneMask } from '../../constants';
+import {AnalyticService} from '../../services/analytic.service';
 
 const EMPTY_STRING = ' ';
 
@@ -29,8 +30,7 @@ export class RequestComponent implements OnInit {
   });
   destroyPhoneStream = new Subject<void>();
 
-  constructor(private http: HttpClient) {
-
+  constructor(private http: HttpClient, private analytic: AnalyticService) {
   }
 
   ngOnInit() {
@@ -48,6 +48,7 @@ export class RequestComponent implements OnInit {
   }
 
   submitForm() {
+    this.analytic.click('Заявка на подбор персонала', 'Filled Form', this.title, '100');
     const data = this.form.getRawValue();
     this.http.post('api/request', data).subscribe(() => {
       this.showAfterSendMessage = true;

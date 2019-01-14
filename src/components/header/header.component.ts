@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router, NavigationEnd} from '@angular/router';
 import {SmoothScroll} from '../../directives/scroll.directive';
 import {scrollOptions} from '../../constants';
-
+import {AnalyticService} from '../../services/analytic.service';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +12,7 @@ import {scrollOptions} from '../../constants';
 export class HeaderComponent implements OnInit {
   scrollTo: string;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private analytic: AnalyticService) {
   }
 
   ngOnInit() {
@@ -38,15 +38,18 @@ export class HeaderComponent implements OnInit {
       || this.router.url === '/voditel' || this.router.url === '/sadovnik' || this.router.url === '/hardirobchik'
       || this.router.url === '/para')) {
       this.doScroll('request');
-
+      this.analytic.click('Кнопка заказа персонала', null, 'Opened Form', '10');
       return;
     }
+
+
 
     if ( route === '/') {
       this.scrollTo = scrollTo;
     }
 
     if (this.router.url  === '/' && route === '/') {
+      this.analytic.click('Кнопка заказа персонала', null, 'Opened Form', '10');
       this.doScroll(scrollTo);
     }
     this.router.navigate([route]);
@@ -56,5 +59,9 @@ export class HeaderComponent implements OnInit {
     setTimeout(() => {
       new SmoothScroll(document.getElementById(scrollTo), scrollOptions);
     }, 200);
+  }
+
+  analytics() {
+    this.analytic.click('Телефонный звонок', null, 'Phone Call', '50');
   }
 }

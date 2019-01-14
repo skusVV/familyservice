@@ -18,7 +18,7 @@
       <div class="phone" *ngFor="let phone of section.secondItem.phones">
         &#8203;
         <span>
-          <a [href]="phone.phone">{{phone.name}}</a>
+          <a [href]="phone.phone" (click)="analytics()">{{phone.name}}</a>
         </span>
       </div>
     </div>
