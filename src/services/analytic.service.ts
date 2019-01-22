@@ -11,8 +11,7 @@ export class AnalyticService {
 
   click(eventCategory: string, eventLabel: string, eventAction: string, eventValue: string) {
     if (this.nativeWindow) {
-      console.log([eventCategory], [eventAction], [eventLabel], [eventValue]);
-      this.nativeWindow.ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue])
+      this.nativeWindow.ga('send', 'event', eventCategory, eventAction, eventLabel, eventValue);
     }
   }
 
