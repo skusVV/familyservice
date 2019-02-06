@@ -13,7 +13,7 @@ export const allPersonal = [
 ];
 
 export const phoneMask =
-  ['(', '0', /[1-9]/, /\d/, ')', ' ', '-', ' ', /\d/, /\d/, /\d/, ' ', '-', ' ', /\d/, /\d/, ' ', '-', ' ', /\d/, /\d/];
+  ['(', /0/, /[1-9]/, /\d/, ')', ' ', '-', ' ', /\d/, /\d/, /\d/, ' ', '-', ' ', /\d/, /\d/, ' ', '-', ' ', /\d/, /\d/];
 
 export const scrollOptions = {
   duration: 800,

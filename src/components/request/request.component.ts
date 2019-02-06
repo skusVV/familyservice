@@ -19,7 +19,7 @@ export class RequestComponent implements OnInit {
   @Input() title: string;
 
   mask = phoneMask;
-  showSecondPart = false;
+  showSecondPart = true;
   showAfterSendMessage = false;
 
   form = new FormGroup({
@@ -55,15 +55,7 @@ export class RequestComponent implements OnInit {
     });
   }
 
-  phoneFocus() {
-    this.form.get('phone').setValue(EMPTY_STRING);
-  }
-
   phoneBlur() {
-    const phoneControl = this.form.get('phone');
-
-    if (phoneControl.value === EMPTY_STRING) {
-      phoneControl.setValue('');
-    }
+    this.analytic.click('Заявка на подбор персонала', `Phone: ${this.form.get('phone').value}`, this.title, '10');
   }
 }

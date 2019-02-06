@@ -20,7 +20,7 @@ export class AnalyticService {
   }
 
   click(eventCategory: string, eventLabel: string, eventAction: string, eventValue: string) {
-    if (this.isBrowser && this.nativeWindow) {
+    if (this.isBrowser && this.nativeWindow && this.nativeWindow.ga) {
       this.nativeWindow.ga('send', 'event', eventCategory, eventAction, eventLabel, eventValue);
     }
   }

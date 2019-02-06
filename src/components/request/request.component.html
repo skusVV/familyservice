@@ -6,9 +6,9 @@
     <div class="request_form_body">
       <div class="request_form_body_form" [formGroup]="form" *ngIf="!showAfterSendMessage">
         <mat-form-field class="request_form_field">
-          <input matInput placeholder="Номер телефона"
-                 [textMask]="{mask: mask, keepCharPositions: true}"
-                 formControlName="phone" (focus)="phoneFocus()" (blur)="phoneBlur()">
+          <input matInput placeholder="Номер телефона *"
+                 type="number"
+                 formControlName="phone" (blur)="phoneBlur()">
         </mat-form-field>
         <mat-form-field class="request_form_field" *ngIf="showSecondPart">
           <input matInput placeholder="Имя" formControlName="name">
