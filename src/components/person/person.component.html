@@ -31,6 +31,11 @@
         <li class="person_types_list_item" *ngFor="let tag of block.tags">{{tag}}</li>
       </ul>
   </div>
+  <div class="person_partners">
+    <mat-card *ngFor="let partner of data.partners" class="person_partners_item">
+      <img mat-card-image [src]="partner" alt="" class="person_partners_item_img">
+    </mat-card>
+  </div>
 </div>
 <app-request [selectOptions]="selectOptions" [title]="title"></app-request>
 <app-footer></app-footer>

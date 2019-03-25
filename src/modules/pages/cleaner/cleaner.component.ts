@@ -108,7 +108,17 @@ export class CleanerComponent implements OnInit {
           `<strong>«Family Service»</strong> – это отличная возможность полностью сосредоточится на карьере, посвятить свободное время семье и отдыху, не
            отвлекаясь на домашние дела. Благодаря профессиональному помощнику в вашем доме всегда будет чисто и уютно.`
         ]
+      },
+      {
+        title: 'Клиенты Агентства'
       }
+    ],
+    partners: [
+      'assets/img/partner_fozzy.jpeg',
+      'assets/img/partner_uniqa.jpeg',
+      'assets/img/partner_toyota.jpg',
+      'assets/img/partner_fornet.jpeg',
+      'assets/img/partner_nova.jpeg',
     ]
   };
 

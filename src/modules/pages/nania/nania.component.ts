@@ -139,7 +139,17 @@ export class NaniaComponent implements OnInit {
           Мы поможем Вам найти помощницу, которая будет соответствовать всем Вашим требованиям.`,
           `<strong>На эти и другие вопросы смогут ответить специалисты нашего агентства. Звоните прямо сейчас! </strong>`
         ]
+      },
+      {
+        title: 'Клиенты Агентства'
       }
+    ],
+    partners: [
+      'assets/img/partner_fozzy.jpeg',
+      'assets/img/partner_uniqa.jpeg',
+      'assets/img/partner_toyota.jpg',
+      'assets/img/partner_fornet.jpeg',
+      'assets/img/partner_nova.jpeg',
     ]
   };
   selectOptions = [
