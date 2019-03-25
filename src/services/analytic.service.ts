@@ -10,7 +10,8 @@ export class AnalyticService {
 
   constructor(@Inject(PLATFORM_ID) private platformId) {
     this.isBrowser = isPlatformBrowser(platformId);
-    if (this.isBrowser) {
+
+    if (this.isBrowser && this.nativeWindow && this.nativeWindow.ga) {
       this.nativeWindow.ga('create', 'UA-129165224-1', 'auto');
     }
   }
