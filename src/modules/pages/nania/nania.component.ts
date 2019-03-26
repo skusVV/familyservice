@@ -141,7 +141,7 @@ export class NaniaComponent implements OnInit {
         ]
       },
       {
-        title: 'Клиенты Агентства'
+        title: 'Нам Доверяют'
       }
     ],
     partners: [
