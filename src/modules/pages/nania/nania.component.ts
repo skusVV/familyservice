@@ -17,7 +17,7 @@ export class NaniaComponent implements OnInit {
   data = {
     titleInverte: false,
     buttonInverte: false,
-    imgSrc: 'assets/img/nania_banner7.jpeg',
+    imgSrc: 'assets/img/nurse_new.jpg',
     title: 'Предлагаем услуги няни по уходу за вашим ребенком',
     buttonText: 'Заказать няню',
     description: `Надежным помощником для вашего малыша станет няня воспитатель. Это
