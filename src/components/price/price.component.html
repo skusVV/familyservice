@@ -11,7 +11,7 @@
         <div class="price_description_header">
           <div>{{data.title}}</div>
         </div>
-        <div class="price_description_item">
+        <div class="price_description_item" *ngIf="!!data.perHourPrice">
           <div>Час от:</div>
           <div>{{data.perHourPrice}}</div>
         </div>
