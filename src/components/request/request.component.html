@@ -6,7 +6,8 @@
     <div class="request_form_body">
       <div class="request_form_body_form" [formGroup]="form" *ngIf="!showAfterSendMessage">
         <mat-form-field class="request_form_field">
-          <input matInput placeholder="Номер телефона *"
+          <input matInput placeholder="Номер телефона"
+                 required
                  type="number"
                  formControlName="phone" (blur)="phoneBlur()">
         </mat-form-field>

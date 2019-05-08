@@ -48,8 +48,11 @@ export class RequestComponent implements OnInit {
   }
 
   submitForm() {
+    this.form.get('phone').markAsTouched();
     this.analytic.click('Заявка на подбор персонала', 'Filled Form', this.title, '100');
+
     const data = this.form.getRawValue();
+
     this.http.post('api/request', data).subscribe(() => {
       this.showAfterSendMessage = true;
     });
