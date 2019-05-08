@@ -49,6 +49,10 @@ export class RequestComponent implements OnInit {
 
   submitForm() {
     this.form.get('phone').markAsTouched();
+
+    if (!this.form.get('phone').value) {
+      return;
+    }
     this.analytic.click('Заявка на подбор персонала', 'Filled Form', this.title, '100');
 
     const data = this.form.getRawValue();
