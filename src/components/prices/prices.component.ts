@@ -34,8 +34,8 @@ export class PricesComponent {
     {
       title: 'Сиделка',
       // perHourPrice: '30 грн.',
-      perDayPrice: '400 грн.',
-      perMonthPrice: '7 000 грн.',
+      perDayPrice: '500 грн.',
+      perMonthPrice: '10 000 грн.',
       imgSrc: 'assets/img/sidelka_price.jpg',
       transition: 'sidelka',
     },
